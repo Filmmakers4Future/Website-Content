@@ -2,6 +2,10 @@ Pagename: Things productions can easily do
 Description: Often even saving some money on the way
 Date: 20.04.2020
 HiddenFromArchive: true
+HiddenFromAuthor: true
+HiddenFromCategory: true
+HiddenFromSearch: true
+HiddenFromSitemap: true
 NoMarkdownParagraphs: true
 SectionAlignment: alternate
 SectionBackground: alternate
