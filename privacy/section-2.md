@@ -1,7 +1,14 @@
 Section: true
+HiddenFromArchive: true
+HiddenFromAuthor: true
+HiddenFromCategory: true
+HiddenFromSearch: true
+HiddenFromSitemap: true
 
 ## 3. Newsletter
+
 ##### 3.1. Newsletter data
+
 For our newsletter we use the email and name you provided when signing our statement. We only use this data to send the requested information.
 
 As mentioned above the cities you provided are being used to send you localized information that might be of interest to you. If you did not provide a city you will only receive the generalized newsletter.

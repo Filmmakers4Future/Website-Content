@@ -1,4 +1,9 @@
 Section: true
+HiddenFromArchive: true
+HiddenFromAuthor: true
+HiddenFromCategory: true
+HiddenFromSearch: true
+HiddenFromSitemap: true
 
 ## Laws and regulations
 

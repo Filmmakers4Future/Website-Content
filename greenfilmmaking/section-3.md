@@ -1,4 +1,9 @@
 Section: true
+HiddenFromArchive: true
+HiddenFromAuthor: true
+HiddenFromCategory: true
+HiddenFromSearch: true
+HiddenFromSitemap: true
 
 ### Make use of organic regional and seasonal foods - reduce meat
 
