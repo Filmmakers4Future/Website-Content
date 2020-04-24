@@ -1,6 +1,3 @@
-Pagename: Index
-Description: #Filmmakers4Future - Filmmakers for Future
-Date: 24.04.2020
 HiddenFromArchive: true
 ReplaceHeading: true
 NoMarkdown: true
