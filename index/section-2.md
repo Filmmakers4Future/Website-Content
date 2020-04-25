@@ -1,10 +1,10 @@
-Section: true
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
 NoMarkdown: true
+Section: true
 
 <div class="row justify-content-center mb-5">
   <div class="col-lg-8 text-center">

@@ -1,9 +1,9 @@
-Section: true
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
+Section: true
 
 ### Educate your crew and team members - inspire them to talk about it
 

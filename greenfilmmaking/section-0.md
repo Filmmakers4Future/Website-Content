@@ -1,9 +1,9 @@
-Section: true
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
+Section: true
 
 ### Have people opt-in for printed call sheets
 

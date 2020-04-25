@@ -1,10 +1,11 @@
+Date: none
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
-ReplaceHeading: true
 NoMarkdown: true
+ReplaceHeading: true
 
 <!-- Masthead -->
 <header class="masthead">

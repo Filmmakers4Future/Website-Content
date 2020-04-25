@@ -1,10 +1,10 @@
-Section: true
-SectionId: statement
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
+Section: true
+SectionId: statement
 
 <div class="row justify-content-center">
   <div class="col-lg-8">

@@ -1,9 +1,9 @@
-Section: true
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
+Section: true
 
 ## 2. Data collection on our website
 
