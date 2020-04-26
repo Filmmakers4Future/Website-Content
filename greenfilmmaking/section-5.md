@@ -4,6 +4,7 @@ HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
 Section: true
+SectionId: inspire
 
 ### Educate your crew and team members - inspire them to talk about it
 

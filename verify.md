@@ -1,5 +1,6 @@
 Pagename: Verify Signature
 Date: none
+Description: Signature verification page.
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true

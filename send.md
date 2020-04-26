@@ -1,6 +1,7 @@
 Pagename: Send Newsletter
+Pageinfo: Use this page to send a newsletter to the newsletter subscribers.
 Date: none
-Description: Use this page to send a newsletter to the newsletter subscribers.
+Description: Send newsletter to subscribers.
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true

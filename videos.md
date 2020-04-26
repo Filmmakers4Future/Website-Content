@@ -1,6 +1,7 @@
 Pagename: Videos
-Date: 24.April.2020
-Description: #Filmmakers4Future - Filmmakers for Future
+Pageinfo: #Filmmakers4Future - Filmmakers for Future
+Date: 24.04.2020
+Description: Videos featuring personal statements by our members and related content.
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true

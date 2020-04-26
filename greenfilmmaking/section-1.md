@@ -4,6 +4,7 @@ HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
 Section: true
+SectionId: plastic
 
 ### Get rid of plastic bottles, disposable cups and dishes
 

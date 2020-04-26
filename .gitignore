@@ -1,3 +1,6 @@
+# ignore Urlaube file
+.gitkeep
+
 # do not publish macOS blergh
 ._*
 .DS_Store

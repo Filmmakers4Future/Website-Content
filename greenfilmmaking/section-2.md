@@ -4,6 +4,7 @@ HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
 Section: true
+Section: wasteseparation
 
 ### Waste separation
 

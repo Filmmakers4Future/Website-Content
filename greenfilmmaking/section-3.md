@@ -4,6 +4,7 @@ HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
 Section: true
+SectionId: food
 
 ### Make use of organic regional and seasonal foods - reduce meat
 

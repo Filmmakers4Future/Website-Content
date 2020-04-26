@@ -5,6 +5,7 @@ HiddenFromSearch: true
 HiddenFromSitemap: true
 NoMarkdown: true
 Section: true
+SectionId: furtherresources
 
 <h2 class="text-center text-white mt-0 mb-5">Further resources</h2>
 <div class="row justify-content-center text-center">

@@ -1,6 +1,7 @@
 Pagename: Signatures
+Pageinfo: #Filmmakers4Future - Filmmakers for Future
 Date: [fm4fsignaturesdate]
-Description: #Filmmakers4Future - Filmmakers for Future
+Description: Public list of filmmakers who support our initiative for a greener film industry.
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
