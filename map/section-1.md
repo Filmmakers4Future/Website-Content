@@ -131,7 +131,7 @@ SectionId: map
 	<div class="col-xl-5 col-lg-5 pt-2">
 		<form onsubmit="searchLocation(document.getElementById('locationSearch'))">
 			<div class="input-group">
-				<input type="text" id="locationSearch" class="form-control" placeholder="Search">
+				<input type="text" id="locationSearch" class="form-control" placeholder="Search Location">
 				<div class="input-group-append">
 					<button class="btn btn-success" type="submit">Go</button> 
 				</div>
