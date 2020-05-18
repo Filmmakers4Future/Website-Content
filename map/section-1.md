@@ -119,12 +119,12 @@ SectionId: map
 			</button>
 			<div class="dropdown-menu scrollable-menu" aria-labelledby="categoryDropdownButton">
 				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm']);">All</a>
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'rental']);">Rentals</a>
 				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'catering']);">Catering</a>
 				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'costume']);">Costume</a>
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'makeup']);">Makeup & Hair</a>
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'transport']);">Transportation</a>
 				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'hotel']);">Hotels</a>
+				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'makeup']);">Makeup & Hair</a>
+				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'rental']);">Rentals</a>
+				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'transport']);">Transportation</a>
 			</div>
 		</div>
 	</div>
