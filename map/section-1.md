@@ -74,6 +74,7 @@ SectionId: map
 				createCookie("map", cookieChoice, 365)
 			}
 		}
+		document.getElementById('map').style.background = 'none';
 		document.getElementById('mapContainer').style["display"] = "";
 		document.getElementById('privacyWarning').style["display"] = "none";
 		mapControl(null, null, null, null);
@@ -97,7 +98,7 @@ SectionId: map
 	// Checks if a cookie exist and shows the map in case
 	function cookieCheck() {
 		var mapCookie = accessCookie("map");
-		if (mapCookie === "true") {
+		if (mapCookie === String(true)) {
 			loadMap("cookie");
 		}
 	}
