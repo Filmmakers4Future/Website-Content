@@ -66,78 +66,130 @@ SectionId: map
 			document.getElementById('greenProductionMap').src = `${mapBaseURL}#/?center=${currentLocation.join(',')}&zoom=${currentZoomLevel}&search=${currentTag.join('%20%23').replace(/^/,'%23')}`;
 		}
 	}
+	// Load the map via cookie or button click
+	function loadMap(runtype) {
+		if (runtype == "button") {
+			cookieChoice = document.getElementById('saveSetting').checked
+			if (cookieChoice) {
+				createCookie("map", cookieChoice, 365)
+			}
+		}
+		document.getElementById('mapContainer').style["display"] = "";
+		document.getElementById('privacyWarning').style["display"] = "none";
+		mapControl(null, null, null, null);
+	}
+	// Cookie helpers
+	function createCookie(cookieName,value,daysToExpire){
+		var date = new Date();
+		date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+		document.cookie = cookieName + "=" + value + "; expires=" + date.toGMTString();
+	}
+	function accessCookie(cookieName) {
+		var name = cookieName + "=";
+		var allCookieArray = document.cookie.split(';');
+		for(var i=0; i<allCookieArray.length; i++) {
+			var temp = allCookieArray[i].trim();
+			if (temp.indexOf(name)==0)
+			return temp.substring(name.length,temp.length);
+ 	  	}
+		return "";
+	}
+	// Checks if a cookie exist and shows the map in case
+	function cookieCheck() {
+		var mapCookie = accessCookie("map");
+		if (mapCookie === "true") {
+			loadMap("cookie");
+		}
+	}
 </script>
 
-#### Shortcuts 
-<div class="row justify-content-center text-white">
-	<div class="col pt-2">
-		<div class="dropdown" id="cities">
-			<button class="btn btn-secondary dropdown-toggle" type="button" id="cityDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Select City
-			</button>
-			<div class="dropdown-menu scrollable-menu" aria-labelledby="cityDropdownButton">
-				<a class="dropdown-item" href="#" onclick="mapControl([45.493,-73.692], 10.00, null);">Canada - Montréal</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([46.803,-71.293], 10.00, null);">Canada - Québec</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([43.680,-79.443], 10.00, null);">Canada - Toronto</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([49.253,-123.139], 10.00, null);">Canada - Vancouver</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([52.503,13.293], 11.00, null);">Germany - Berlin</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([50.975,11.014], 11.00, null);">Germany - Erfurt</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([53.548,9.957], 11.00, null);">Germany - Hamburg</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([50.939,6.944], 11.00, null);">Germany - Köln</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([51.340,12.335], 11.00, null);">Germany - Leipzig</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([48.134,11.544], 11.00, null);">Germany - München</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([52.399,13.011], 11.00, null);">Germany - Potsdam</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([51.452,-2.606], 10.00, null);">UK - Bristol</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([51.480,-3.190], 10.00, null);">UK - Cardiff</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([51.500,-0.196], 10.00, null);">UK - London</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([33.747,-84.398], 10.00, null);">USA - Atlanta</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([41.877,-87.670], 10.00, null);">USA - Chicago</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([34.026,-118.264], 10.00, null);">USA - Los Angeles</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([25.778,-80.211], 10.00, null);">USA - Miami</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([44.958,-93.309], 10.00, null);">USA - Minneapolis</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([29.931,-90.102], 10.00, null);">USA - New Orleans</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([40.679,-73.996], 10.00, null);">USA - New Yorck</a>
-				<a class="dropdown-item" href="#" onclick="mapControl([47.591,-122.324], 10.00, null);">USA - Seattle</a>
-			</div>
-		</div>
-	</div>
-	<div class="col pt-2">
+<div id ="mapContainer" style="display:none">
+	<div markdown="1">#### Shortcuts</div>
+	<div class="row justify-content-center text-white">
+		<div class="col pt-2">
 			<div class="dropdown" id="region">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="regionDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Select Region
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Select Category
 				</button>
-				<div class="dropdown-menu scrollable-menu" aria-labelledby="regionDropdownButton">
-					<a class="dropdown-item" href="#" onclick="mapControl([46.195,7.031], 5.00, null);">Europe</a>
-					<a class="dropdown-item" href="#" onclick="mapControl([43.069,-96.328], 4.00, null);">North America</a>
+				<div class="dropdown-menu scrollable-menu" aria-labelledby="categoryDropdownButton">
+					<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm']);">All</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'catering']);">Catering</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'costume']);">Costume</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'hotel']);">Hotels</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'makeup']);">Makeup & Hair</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'rental']);">Rentals</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'transport']);">Transportation</a>
 				</div>
-			</div>
-	</div>
-	<div class="col pt-2">
-		<div class="dropdown" id="region">
-			<button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Select Category
-			</button>
-			<div class="dropdown-menu scrollable-menu" aria-labelledby="categoryDropdownButton">
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm']);">All</a>
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'catering']);">Catering</a>
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'costume']);">Costume</a>
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'hotel']);">Hotels</a>
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'makeup']);">Makeup & Hair</a>
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'rental']);">Rentals</a>
-				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'transport']);">Transportation</a>
 			</div>
 		</div>
-	</div>
-	<div class="col-xl-5 col-lg-5 pt-2">
-		<form onsubmit="searchLocation(document.getElementById('locationSearch'))">
-			<div class="input-group">
-				<input type="text" id="locationSearch" class="form-control" placeholder="Search Location">
-				<div class="input-group-append">
-					<button class="btn btn-success" type="submit">Go</button> 
+		<div class="col pt-2">
+			<div class="dropdown" id="cities">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="cityDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Select City
+				</button>
+				<div class="dropdown-menu scrollable-menu" aria-labelledby="cityDropdownButton">
+					<a class="dropdown-item" href="#" onclick="mapControl([45.493,-73.692], 10.00, null);">Canada - Montréal</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([46.803,-71.293], 10.00, null);">Canada - Québec</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([43.680,-79.443], 10.00, null);">Canada - Toronto</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([49.253,-123.139], 10.00, null);">Canada - Vancouver</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([52.503,13.293], 11.00, null);">Germany - Berlin</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([50.975,11.014], 11.00, null);">Germany - Erfurt</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([53.548,9.957], 11.00, null);">Germany - Hamburg</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([50.939,6.944], 11.00, null);">Germany - Köln</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([51.340,12.335], 11.00, null);">Germany - Leipzig</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([48.134,11.544], 11.00, null);">Germany - München</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([52.399,13.011], 11.00, null);">Germany - Potsdam</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([51.452,-2.606], 10.00, null);">UK - Bristol</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([51.480,-3.190], 10.00, null);">UK - Cardiff</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([51.500,-0.196], 10.00, null);">UK - London</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([33.747,-84.398], 10.00, null);">USA - Atlanta</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([41.877,-87.670], 10.00, null);">USA - Chicago</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([34.026,-118.264], 10.00, null);">USA - Los Angeles</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([25.778,-80.211], 10.00, null);">USA - Miami</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([44.958,-93.309], 10.00, null);">USA - Minneapolis</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([29.931,-90.102], 10.00, null);">USA - New Orleans</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([40.679,-73.996], 10.00, null);">USA - New Yorck</a>
+					<a class="dropdown-item" href="#" onclick="mapControl([47.591,-122.324], 10.00, null);">USA - Seattle</a>
 				</div>
 			</div>
-		</form>
+		</div>
+		<div class="col pt-2">
+				<div class="dropdown" id="region">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="regionDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Select Region
+					</button>
+					<div class="dropdown-menu scrollable-menu" aria-labelledby="regionDropdownButton">
+						<a class="dropdown-item" href="#" onclick="mapControl([46.195,7.031], 5.00, null);">Europe</a>
+						<a class="dropdown-item" href="#" onclick="mapControl([43.069,-96.328], 4.00, null);">North America</a>
+					</div>
+				</div>
+		</div>
+		<div class="col-xl-5 col-lg-5 pt-2">
+			<form onsubmit="searchLocation(document.getElementById('locationSearch'))">
+				<div class="input-group">
+					<input type="text" id="locationSearch" class="form-control" placeholder="Search Location">
+					<div class="input-group-append">
+						<button class="btn btn-success" type="submit">Go</button> 
+					</div>
+				</div>
+			</form>
+		</div>
 	</div>
+	<iframe class="pt-3" id="greenProductionMap" name="greenProductionMap" style="height:75vh;border: none;" width="100%" height="100%"></iframe>
+	<div markdown="1">**Please note:** Not all [available tags and cities](#mapHowTo) are listed in the scrollable shortcuts menu. In case you miss a link [contact us](/contact/).</div>
+</div>
+
+<div class="text-center text-white pt-5 pb-5" id="privacyWarning" style="display:none;" markdown="1">
+**Privacy notice**  
+This map uses the external services [mapoftomorrow.org](http://mapoftomorrow.org/) and [openstreetmap.org](https://openstreetmap.org/).  
+You can find more information about this in our [Privacy Policy](/privacy).  
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="" id="saveSetting">
+	<label title="Cookie name: map - Cookie value: true - Expires in 365 days" class="form-check-label" for="saveSetting">
+		Do not show again (a cookie is set).
+	</label>
+</div>
+<button type="button" class="btn btn-info mt-2" onclick="loadMap('button')">Allow and Load Map</button>
 </div>
 
 <noscript>
@@ -147,12 +199,10 @@ SectionId: map
 	</div>
 </noscript>
 
-<iframe class="pt-3" id="greenProductionMap" name="greenProductionMap" style="height:75vh;display: none;border: none;" width="100%" height="100%"></iframe>
-
-**Please note:** Not all [available tags and cities](#mapHowTo) are listed in the scrollable shortcuts menu. In case you miss a link [contact us](/contact/).
-
 <!-- Connects to kartevonmorgen.org only if javascript is enabled -->
 <script>
-	document.getElementById('greenProductionMap').style["display"] = "inline-block";
-	mapControl(null, null, null, null);
+	// show privacy warning - only shows when javascript is enabled since map cant be used without it anyway
+	document.getElementById('privacyWarning').style["display"] = "";
+	// Check if cookie is present
+	cookieCheck()
 </script>
