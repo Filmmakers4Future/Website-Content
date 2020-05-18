@@ -23,7 +23,7 @@ SectionId: map
 				if (xhr.status === 200) {
 					var response = JSON.parse(xhr.responseText)
 					var zoomLevel = getZoomLevel(response[0]["boundingbox"]);
-					mapControl(null, [response[0]["lat"], response[0]["lon"]], zoomLevel, null)
+					mapControl([response[0]["lat"], response[0]["lon"]], zoomLevel, null)
 					search.value = '';
 				}
 				else {
@@ -50,7 +50,7 @@ SectionId: map
 		}
 	}
 	// Function to control the iframe content
-	function mapControl(event, loc, zoom, tag) {
+	function mapControl(loc, zoom, tag) {
 		// If opened by onclick disable default (adding # to the url)
 		if (event) {event.preventDefault()};
 		// Checks if a new location, tag or zoom level is passed to the function
@@ -69,13 +69,13 @@ SectionId: map
 </script>
 
 #### Shortcuts 
-<div class="row justify-content-left text-white">
-	<div class="col-xl-3 col-lg-2 col-md-4 col-sm-4 col-10 pt-2">
+<div class="row justify-content-center text-white">
+	<div class="col pt-2">
 		<div class="dropdown" id="cities">
-			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="cityDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Select City
 			</button>
-			<div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton">
+			<div class="dropdown-menu scrollable-menu" aria-labelledby="cityDropdownButton">
 				<a class="dropdown-item" href="#" onclick="mapControl([45.493,-73.692], 10.00, null);">Canada - Montréal</a>
 				<a class="dropdown-item" href="#" onclick="mapControl([46.803,-71.293], 10.00, null);">Canada - Québec</a>
 				<a class="dropdown-item" href="#" onclick="mapControl([43.680,-79.443], 10.00, null);">Canada - Toronto</a>
@@ -101,23 +101,23 @@ SectionId: map
 			</div>
 		</div>
 	</div>
-	<div class="col-xl-3 col-lg-2 col-md-4 col-sm-4 col-10 pt-2">
+	<div class="col pt-2">
 			<div class="dropdown" id="region">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="regionDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Select Region
 				</button>
-				<div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton">
+				<div class="dropdown-menu scrollable-menu" aria-labelledby="regionDropdownButton">
 					<a class="dropdown-item" href="#" onclick="mapControl([46.195,7.031], 5.00, null);">Europe</a>
 					<a class="dropdown-item" href="#" onclick="mapControl([43.069,-96.328], 4.00, null);">North America</a>
 				</div>
 			</div>
 	</div>
-	<div class="col-xl-3 col-lg-2 col-md-4 col-sm-4 col-10 pt-2">
+	<div class="col pt-2">
 		<div class="dropdown" id="region">
-			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Select Category
 			</button>
-			<div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton">
+			<div class="dropdown-menu scrollable-menu" aria-labelledby="categoryDropdownButton">
 				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm']);">All</a>
 				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'rental']);">Rentals</a>
 				<a class="dropdown-item" href="#" onclick="mapControl(null, null, ['greenfilm', 'catering']);">Catering</a>
@@ -128,7 +128,7 @@ SectionId: map
 			</div>
 		</div>
 	</div>
-	<div class="col-xl-3 col-lg-5 col-md-4 col-sm-4 col-10 pt-2">
+	<div class="col-xl-5 col-lg-5 pt-2">
 		<form onsubmit="searchLocation(document.getElementById('locationSearch'))">
 			<div class="input-group">
 				<input type="text" id="locationSearch" class="form-control" placeholder="Search">
