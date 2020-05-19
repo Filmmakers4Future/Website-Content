@@ -52,7 +52,7 @@ SectionId: map
 	// Function to control the iframe content
 	function mapControl(element, loc, zoom, tag) {
 		// If opened by onclick disable default (adding # to the url)
-		if (event) {
+		if (event && element) {
 			event.preventDefault();
 			// Change the active element (style)
 			if (element.parentElement.id == "categoryDropdown") {
@@ -228,7 +228,7 @@ SectionId: map
 		</div>
 	</div>
 	<iframe class="pt-3" id="greenProductionMap" name="greenProductionMap" style="height:75vh;border: none;" width="100%" height="100%"></iframe>
-	<div markdown="1">**Please note:** Not all [available tags and cities](#mapHowTo) are listed in the scrollable shortcuts menu. In case you miss a link [contact us](/contact/).</div>
+	<div markdown="1">**Please note:** If we have forgotten a category or an important film city in the shortcuts, please [contact us](/contact/).</div>
 </div>
 
 <div class="text-center text-white pt-5 pb-5" id="privacyWarning" style="display:none;" markdown="1">

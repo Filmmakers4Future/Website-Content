@@ -25,7 +25,7 @@ ReplaceHeading: true
       </div>
       <div class="col-lg-9 align-self-start">
         <p class="text-white-85 font-weight-light mb-4" style="font-size:1.24rem" id="main_text">Our goal is to minimize the environmental impact of the global film industry. We focus primarily on raising awareness and encouraging the exchange of knowledge and experience.</p>
-        <a class="btn btn-primary btn-xl js-scroll-trigger " href="#statement">Read our Statement</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#statement">Read our Statement</a>
       </div>
     </div>
   </div>
