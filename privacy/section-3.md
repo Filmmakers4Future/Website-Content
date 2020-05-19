@@ -44,7 +44,25 @@ The privacy policy of Mailgun can be found at: [www.mailgun.com/privacy-policy](
 
 The use of Mailgun is based on our legitimate interest (per Art. 6 (1) p. 1 lit. f GDPR) since it ensures that emails (newsletters, signing verification etc.) are delivered reliably, securely and quickly without being mistakenly classified as spam.
 
-### 4.2. Netcup
+### 4.3. Green Production Map
+##### 4.3.1. mapoftomorrow.org
+The Green Production Map interface is hosted by mapoftomorrow.org. When loading the map, a connection to the servers of Ideen³ e.V., Knipsgasse 43, 54337 Alfter, Germany is established.
+
+Further information on data protection at "Ideen³ e.V." can be found in the provider's data protection declaration under [kartevonmorgen.org](https://kartevonmorgen.org/#).
+
+The use of mapoftomorrow.org is based on your consent (per Art. 6 (1) p. 1 lit. a GDPR).
+
+##### 4.3.2. Open Street Map
+We use an API (Communication interface that allows software to talk to other software) hosted by the OpenStreetMap Foundation (OSMF) to look up the coordinates of search terms you enter into the search interface.  
+mapoftomorrow.org also uses services by OSMF to display the map you can see in the interface.  
+When loading the map, a connection to the servers of OpenStreetMap Foundation (OSMF), St John’s Innovation Centre, Cowley Road, Cambridge, CB4 0WS, United Kingdom is established.
+
+Further information on data protection at the "OpenStreetMap Foundation (OSMF)" can be found in the provider's data protection declaration under [wiki.osmfoundation.org/wiki/Privacy_Policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy).
+
+The use of Open Street Map is based on your consent (per Art. 6 (1) p. 1 lit. a GDPR).
+
+
+### 4.4. Netcup
 
 We use Netcup GmbH, Daimlerstraße 25, 76185 Karlsruhe ([www.netcup.de](https://www.netcup.de)) as our hosting provider.
 
