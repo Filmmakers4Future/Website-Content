@@ -64,7 +64,7 @@ The use of Open Street Map is based on your consent (per Art. 6 (1) p. 1 lit. a 
 
 ### 4.4. phasedrei
 
-We use phasedrei, Edenkobener Str. 12, 67067 Ludwigshafen am Rhein ([https://phasedrei.de/](https://phasedrei.de/) as our hosting provider.
+We use phasedrei, Edenkobener Str. 12, 67067 Ludwigshafen am Rhein ([https://phasedrei.de/](https://phasedrei.de/)) as our hosting provider.
 
 The collected data mentioned in Section 2 is processed and stored on servers provided by phasedrei.
 
