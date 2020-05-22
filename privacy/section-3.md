@@ -62,12 +62,12 @@ Further information on data protection at the "OpenStreetMap Foundation (OSMF)" 
 The use of Open Street Map is based on your consent (per Art. 6 (1) p. 1 lit. a GDPR).
 
 
-### 4.4. Netcup
+### 4.4. phasedrei
 
-We use Netcup GmbH, Daimlerstraße 25, 76185 Karlsruhe ([www.netcup.de](https://www.netcup.de)) as our hosting provider.
+We use phasedrei, Edenkobener Str. 12, 67067 Ludwigshafen am Rhein ([https://phasedrei.de/](https://phasedrei.de/) as our hosting provider.
 
-The collected data mentioned in Section 2 is processed and stored on servers provided by Netcup GmbH.
+The collected data mentioned in Section 2 is processed and stored on servers provided by phasedrei.
 
-We have entered into a data processing agreement with Netcup GmbH for the outsourcing of our data processing and fully implement the strict requirements of the German data protection authorities when using the services by Netcup GmbH.
+We have entered into a data processing agreement with phasedrei for the outsourcing of our data processing and fully implement the strict requirements of the German data protection authorities when using the services by phasedrei.
 
-The privacy policy of Netcup GmbH can be found at: [www.netcup.eu/kontakt/datenschutzerklaerung.php](https://www.netcup.eu/kontakt/datenschutzerklaerung.php)
+The privacy policy of phasedrei can be found at: [https://phasedrei.de/datenschutz/](https://phasedrei.de/datenschutz/)
