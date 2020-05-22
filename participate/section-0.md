@@ -23,6 +23,6 @@ The following groups currently exist:
   </ul>
 </ul>
 
-Our working groups can be found at [groups.filmmakersforfuture.org](https://groups.filmmakersforfuture.org). If you use any kind of social network you will proably feel right at home. To get an invite, [contact us](/contact/) and choose **Working Group Invite** as subject, you don't need to add a message if you have signed the statement. We are working on ways to automate this in the future.
+Our working groups can be found at [groups.fm4f.org](https://groups.fm4f.org). If you use any kind of social network you will proably feel right at home. To get an invite, [contact us](/contact/) and choose **Working Group Invite** as subject, you don't need to add a message if you have signed the statement. We are working on ways to automate this in the future.
 
 Please join our groups and get involved!
