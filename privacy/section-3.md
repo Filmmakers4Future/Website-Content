@@ -71,3 +71,5 @@ The collected data mentioned in Section 2 is processed and stored on servers pro
 We have entered into a data processing agreement with phasedrei for the outsourcing of our data processing and fully implement the strict requirements of the German data protection authorities when using the services by phasedrei.
 
 The privacy policy of phasedrei can be found at: [https://phasedrei.de/datenschutz/](https://phasedrei.de/datenschutz/)
+
+The use of phasedrei is based on our legitimate interest (per Art. 6 (1) p. 1 lit. f GDPR) in the efficient and secure hosting of this website.
