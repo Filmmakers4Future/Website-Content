@@ -126,7 +126,7 @@ SectionId: map
 					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#greenfilm', '#filmmakers4future']);">Our Supporters</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">Accomodation</h6>
-					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, ['#greenfilm', '#accomodation']);">All Entries</a>
+					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, ['#greenfilm', '#accommodation']);">All Entries</a>
 					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#greenfilm', '#accomodation', '#apartment']);">Apartments</a>
 					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#greenfilm', '#accomodation', '#hotel']);">Hotels</a>
 					<div class="dropdown-divider"></div>
