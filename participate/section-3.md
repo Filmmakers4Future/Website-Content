@@ -10,7 +10,7 @@ SectionId: posters
 
 Posters are a good way to increase our visibility. Displayed in equipment rentals or production companies, they encourage employees and customers to engage.
 
-<div class="row justify-content-end pt-1">
+<div class="row justify-content-start pt-1">
   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7 col-20 mx-0">
     <figure class="figure">
       <img src="/user/uploads/img/poster/sign_statement.jpg" class="figure-img img-fluid" alt="Sign now! - Poster">

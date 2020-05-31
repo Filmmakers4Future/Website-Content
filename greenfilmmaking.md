@@ -7,7 +7,7 @@ HiddenFromAuthor: true
 HiddenFromCategory: true
 HiddenFromSearch: true
 NoMarkdownParagraphs: true
-SectionAlignment: alternate
+SectionAlignment: left
 SectionBackground: alternate
 
 This guide is still work in progress. Want to help finish it? Join our [working groups](/participate).

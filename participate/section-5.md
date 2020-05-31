@@ -10,7 +10,7 @@ SectionId: stickers
 
 Please do not put these stickers on other people's property without their consent.
 
-<div class="row justify-content-end pt-4">
+<div class="row justify-content-start pt-4">
   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7 col-20 mx-5">
     <figure class="figure">
       <img src="/user/uploads/files/logos/logo_circle.svg" width="500px" class="figure-img img-fluid" alt="">

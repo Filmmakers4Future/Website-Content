@@ -7,5 +7,5 @@ HiddenFromAuthor: true
 HiddenFromCategory: true
 HiddenFromSearch: true
 NoMarkdownParagraphs: true
-SectionAlignment: alternate
+SectionAlignment: left
 SectionBackground: alternate
