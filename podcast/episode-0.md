@@ -1,6 +1,6 @@
 Title: Introduction to the Podcast
 Category: Podcast
-Date: 17.04.2020 00:00
+Date: 31.05.2020 19:24
 podlove_podcastTitle: Filmmakers for Future - Sustainability in Film
 podlove_podcastLink: https://filmmakersforfuture.org/podcast/
 podlove_title: Introduction to the Podcast
