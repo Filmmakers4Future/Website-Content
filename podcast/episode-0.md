@@ -12,8 +12,6 @@ podlove_audioTitles: MP3 Audio
 podlove_audioMimeTypes: audio/mpeg
 podlove_chapterTitles: Introduction to the podcast,A few words on the host,Filmmakers for Future,Call to action
 podlove_chapterStarts: 0:00.000,00:58.894,1:29.836,4:28.150
-podlove_chapterLinks: ,
-podlove_chapterImages: ,
 SectionBackground: alternate
 
 [podloveplayer]
