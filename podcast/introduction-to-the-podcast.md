@@ -17,10 +17,10 @@ SectionBackground: alternate
 [podloveplayer]
 
 <br>
-#### About this episode
+### About this episode
 In this short introductory episode Luisa will explain what this podcast is all about and talk to Paul-Vincent from Filmmaker for Future about the initiative in general.
 
-###### Links from the episode
+#### Links from the episode
 * [9 Months Fridays for Future](https://www.youtube.com/watch?v=-rsHwf56S3s) (YouTube - English subtitles available)
 * [Public statement from Filmmakers for Future](https://filmmakersforfuture.org/#statement)
    * You can sign it [here](https://filmmakersforfuture.org/#sign)!
