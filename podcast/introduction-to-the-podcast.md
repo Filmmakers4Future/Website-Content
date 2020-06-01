@@ -1,4 +1,5 @@
 Title: Introduction to the Podcast
+Description: Introductory episode of our new Podcast with Luisa-Céline Gaffron.
 Category: Podcast
 Date: 31.05.2020 19:24
 podlove_podcastTitle: Filmmakers for Future - Sustainability in Film
