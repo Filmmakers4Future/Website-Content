@@ -6,7 +6,7 @@ HiddenFromSitemap: true
 Section: true
 SectionId: office
 
-### Improve your office
+## Improve your office
 
 A good deal of film production takes place in offices. From coming up with ideas in one's home office to the development and financing by producers, as well as the similarly office-based production process. As such, pan-industry topics such as green offices in sustainable buildings are hugely important in our industry as well.
 

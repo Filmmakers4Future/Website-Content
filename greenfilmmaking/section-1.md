@@ -6,7 +6,7 @@ HiddenFromSitemap: true
 Section: true
 SectionId: plastic
 
-### Get rid of plastic bottles, disposable cups and dishes
+## Get rid of plastic bottles, disposable cups and dishes
 
 **Plastic bottles** are a **big problem** on film sets. Crew members **take one, drink a few sips, place it somewhere** to continue working and then don't remember which bottle was theirs. The result? They **take a new one**, leaving the location department with dozens of almost full bottles for disposal. This is not only very costly, it is a **nightmare for the environment**.
 

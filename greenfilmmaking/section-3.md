@@ -6,7 +6,7 @@ HiddenFromSitemap: true
 Section: true
 SectionId: food
 
-### Make use of organic regional and seasonal foods - reduce meat
+## Make use of organic regional and seasonal foods - reduce meat
 
 Regional and seasonal foods have many advantages. They do not have to be transported over long distances and thus save a lot of CO₂, which would otherwise be released during transport. They support local agriculture and are fresher because they do not have to be harvested prematurely and instead end up directly in the hands of the consumer without much detour. This often makes them tastier and healthier as well.
 
