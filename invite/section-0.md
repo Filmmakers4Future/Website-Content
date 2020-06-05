@@ -61,7 +61,6 @@ Fiction and visual storytelling in general have the ability to construct realiti
 You can also join their working groups and participate in making the industry fit for the future. Help is very much welcome! Visit https://filmmakersforfuture.org/participate/ for more information.
 
 Best,
-
 			</textarea>
 		</div>
 	</div>
