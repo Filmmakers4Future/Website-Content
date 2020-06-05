@@ -4,10 +4,14 @@ HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
 Section: true
+SectionBackground: alternate
 NoMarkdown: true
 
 <script>
 window.onload = function () {
+	// show invite tool - only shows when javascript is enabled
+	document.getElementById('invite_tool').style["display"] = "";
+		
 	$('#mail').tagThis({
 		noDuplicates: true,
 		email : true,
@@ -39,14 +43,14 @@ function processData(action){
 	};
 </script>
 
-<div class="row justify-content-center">
+<div class="row justify-content-center" id="invite_tool" style="display:none">
 	<div class="col-lg-9 text-center text-white">
 		<!-- Email -->
-		You can enter multiple email addresses - just press Enter or add a comma after each one.
+		<div class="mb-1 small text-white-75">You can enter multiple email addresses - just press Enter or add a comma after each one.</div>
 		<input type="email" id="mail" maxlength="256"class="form-control mb-4">
 		<!-- Message -->
 		<div class="form-group">
-<textarea id="body" rows="10" class="form-control mb-4">
+<textarea id="body" rows="10" class="form-control mb-4 mt-4">
 Hi,
 I have signed the public statement by Filmmakers for Future and would like to encourage you to sign as well!
 
@@ -73,13 +77,11 @@ Best,
 	<div class="col-lg-4 text-center text-white">
 		<button class="btn btn-info btn-block mb-1" onclick="processData('copy')">Copy to the clipboard</button>
 	</div>
-	<div class="col-lg-10 text-center text-white mt-4">
-		<span class="text-white-75 text-center">
-			<strong>Information on data protection and a how to</strong><br>
-			The information you enter in this form will not be sent to our server.<br>
-			Instead, a message with the information you entered will open in your default email program.<br>
-			There you can add more contacts and then send the email.<br>
-			In case you do not have an e-mail program installed, you can also copy the text and addresses to the clipboard.
-		</span>
-	</div>
 </div>
+
+<noscript>
+	<div class="text-center text-white pt-5 pb-5">
+	 <b>To use the invite tool it is necessary to enable JavaScript.<br>
+	 You can follow <a href="https://www.enable-javascript.com/">the instructions</a> to enable JavaScript in your web browser.</b>
+	</div>
+</noscript>
