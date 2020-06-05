@@ -5,6 +5,7 @@ HiddenFromSearch: true
 HiddenFromSitemap: true
 NoMarkdown: true
 Section: true
+SectionBackground: primary
 
 <div class="row justify-content-center mb-5">
   <div class="col-lg-8 text-center">
