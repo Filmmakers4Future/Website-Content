@@ -5,7 +5,6 @@ HiddenFromSearch: true
 HiddenFromSitemap: true
 Section: true
 SectionId: map
-NoMarkdown: true
 
 <script type="text/javascript">
 	// Default map location and configuration
