@@ -10,6 +10,6 @@ HiddenFromSearch: true
 NoMarkdownParagraphs: true
 SectionBackground: dark
 
-**[Invite](https://filmmakersforfuture.org/invite/) your colleagues to sign!**  
+**[Invite](/invite/) your colleagues to sign!**  
   
 Total signatures: [fm4fsignaturescount]
