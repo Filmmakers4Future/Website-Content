@@ -31,6 +31,7 @@ function processData(action){
 		}
 		var body = $('#body').val();
 		if (action == "openMail") {
+			body = body.replace(/\r\n|\r|\n/g, "%0D%0A");
 			location.href = "mailto:?bcc=" + cc + "&subject=Invite to Filmmakers for Future&body=" + body
 		} else if (action == "copy") {
 			copyToClipboard("Please copy the list of email addresses into the bcc field of your mail service and then remove it from the mail:\r\n\r\n" + cc + "\r\n\r\n" + body)
@@ -41,6 +42,7 @@ function processData(action){
 <div class="row justify-content-center">
 	<div class="col-lg-9 text-center text-white">
 		<!-- Email -->
+		You can enter multiple email addresses - just press Enter or add a comma after each one.
 		<input type="email" id="mail" maxlength="256"class="form-control mb-4">
 		<!-- Message -->
 		<div class="form-group">
