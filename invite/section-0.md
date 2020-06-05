@@ -75,7 +75,11 @@ Best,
 	</div>
 	<div class="col-lg-10 text-center text-white mt-4">
 		<span class="text-white-75 text-center">
-			<strong>Privacy Information</strong><br>The information you enter in this form will not be sent to our server.<br>Instead, a message with the information you entered will open in your default email program.<br>There you can add more contacts and then send the email.
+			<strong>Information on data protection and a how to</strong><br>
+			The information you enter in this form will not be sent to our server.<br>
+			Instead, a message with the information you entered will open in your default email program.<br>
+			There you can add more contacts and then send the email.<br>
+			In case you do not have an e-mail program installed, you can also copy the text and addresses to the clipboard.
 		</span>
 	</div>
 </div>
