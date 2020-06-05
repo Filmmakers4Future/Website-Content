@@ -44,7 +44,7 @@ function processData(action){
 		<input type="email" id="mail" maxlength="256"class="form-control mb-4">
 		<!-- Message -->
 		<div class="form-group">
-			<textarea id="body" rows="10" class="form-control mb-4">
+<textarea id="body" rows="10" class="form-control mb-4">
 Hi,
 I have signed the public statement by Filmmakers for Future and would like to encourage you to sign as well!
 
@@ -61,7 +61,7 @@ Fiction and visual storytelling in general have the ability to construct realiti
 You can also join their working groups and participate in making the industry fit for the future. Help is very much welcome! Visit https://filmmakersforfuture.org/participate/ for more information.
 
 Best,
-			</textarea>
+</textarea>
 		</div>
 	</div>
 	
