@@ -7,7 +7,7 @@ podlove_podcastLink: https://filmmakersforfuture.org/podcast/
 podlove_title: Introduction to the Podcast
 podlove_poster: https://podcast.fm4f.org/assets/cover.jpg
 podlove_duration: 00:04:58
-podlove_audioFiles: https://podcast.fm4f.org/episodes/0000/episode-0.mp3
+podlove_audioFiles: https://filmmakersforfuture.org/user/uploads/podcast/episodes/0000/episode-0.mp3
 podlove_audioSizes: 4042394
 podlove_audioTitles: MP3 Audio
 podlove_audioMimeTypes: audio/mpeg
