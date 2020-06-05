@@ -19,4 +19,4 @@ It identifies the ways in which injustices happening to marginalized communities
 It brings injustices done to vulnerable communities, and the earth, to the forefront and does not minimize or silence social inequality.  
 **Intersectional environmentalism advocates for justice for people and the planet.**
 
-<div markdown=1 class="text-white-50 mt-0 font-weight-light">Explanation borrowed with permission from [Leah Thomas](https://www.instagram.com/greengirlleah/).</div>
+<div markdown=1 class="text-white-50 mt-0 font-weight-light">Explanation borrowed from [Leah Thomas](https://www.instagram.com/greengirlleah/) with her permission.</div>
