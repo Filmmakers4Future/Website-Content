@@ -4,25 +4,29 @@ HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
 Section: true
-SectionId: logos
+SectionId: crewunited
 
-### Logos
+### Filmmakers for Future on Crew United
 
-Once you have signed the statement, you may use the logos offered below to communicate this. You may also use them to link to us. However, you may not express your views "on behalf" of Filmmakers for Future beyond the statement.
+If you are in a country where [Crew United](https://www.crew-united.com/en) is used as a cv and networking platform, you can add **Filmmakers for Future (Fm4F)** as an association to your profile. This way your colleagues can directly see who they can team up with and companies can easily search for crew members for green productions.
 
-<div class="row justify-content-start pt-4">
-  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7 col-20 mx-5">
+<div class="row justify-content-center pt-4">
+  <div class="col-xl-3 col-lg-3 col-md-5 col-sm-10 col-20 mx-3">
     <figure class="figure">
-      <img src="/user/uploads/files/logos/logo_circle.svg" width="500px" class="figure-img img-fluid" alt="">
-      <figcaption class="text-center text-white"><a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/logos/logo_circle.svg" download="Filmmakers4Future_Standalone">svg</a> <span class="small font-weight-light">(rgb)</span> · <a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/logos/logo_circle.png" download="Filmmakers4Future_Standalone">png</a> <span class="small font-weight-light">(rgb)</span> · <a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/logos/logo_circle.pdf" download="Filmmakers4Future_Standalone">pdf</a> <span class="small font-weight-light">(cmyk)</span> · <a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/logos/logo_circle.eps" download="Filmmakers4Future_Standalone">eps</a> <span class="small font-weight-light">(cmyk)</span></figcaption>
+      <img src="/user/uploads/img/crew_united/1.png" width="500px" class="figure-img img-fluid" alt="">
+      <figcaption class="text-center text-white">Edit your profile</figcaption>
     </figure>
   </div>
-  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7 col-20 mx-5">
+  <div class="col-xl-3 col-lg-3 col-md-5 col-sm-10 col-20 mx-3">
     <figure class="figure">
-      <img src="/user/uploads/files/logos/logo_standalone.svg" width="500px" class="figure-img img-fluid" alt="">
-      <figcaption class="text-center text-white"><a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/logos/logo_standalone.svg" download="Filmmakers4Future_Standalone">svg</a> <span class="small font-weight-light">(rgb)</span> · <a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/logos/logo_standalone.png" download="Filmmakers4Future_Standalone">png</a> <span class="small font-weight-light">(rgb)</span></figcaption>
+      <img src="/user/uploads/img/crew_united/2.png" width="500px" class="figure-img img-fluid" alt="">
+      <figcaption class="text-center text-white"><b>Fm4F</b> next to your profile picture</figcaption>
+    </figure>
+  </div>
+  <div class="col-xl-4 col-lg-4 col-md-9 col-sm-10 col-20 mx-3">
+    <figure class="figure">
+      <img src="/user/uploads/img/crew_united/3.png" width="500px" class="figure-img img-fluid" alt="">
+      <figcaption class="text-center text-white">Filmmakers for Future in your basic data</figcaption>
     </figure>
   </div>
 </div>
-
-<p class="text-white-50 mt-0 small font-weight-light">The Filmmakers for Future logo was designed by <a target="_blank" rel="noopener noreferrer" href="http://www.felixjanz.de">Felix Janz</a>. Thank you!</p>

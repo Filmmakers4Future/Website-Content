@@ -4,17 +4,40 @@ HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
 Section: true
-SectionId: stickers
+SectionId: press
 
-### Stickers for self-printing
+### Social media and press
 
-Please do not put these stickers on other people's property without their consent.
+Graphics for social media networks and press articles.
 
-<div class="row justify-content-start pt-4">
-  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7 col-20 mx-5">
+<div class="row justify-content-start pt-1">
+
+  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10 col-15 mx-0">
+      <figure class="figure">
+        <img src="/user/uploads/files/graphics/logo_square.jpg" class="figure-img img-fluid" alt="">
+        <figcaption class="text-center text-white"><a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/graphics/logo_square.png" download="Filmmakers4Future_Logo_Square">png</a> <span class="small font-weight-light">(square)</span></figcaption>
+      </figure>
+    </div>
+    
+  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10 col-15 mx-0">
+      <figure class="figure">
+        <img src="/user/uploads/files/graphics/goals_square.jpg" class="figure-img img-fluid" alt="">
+        <figcaption class="text-center text-white"><a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/graphics/goals_square.png" download="Filmmakers4Future_Goals_Square">png</a> <span class="small font-weight-light">(square)</span> · <a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/graphics/goals_vertical.png" download="Filmmakers4Future_Goals_Vertical">png</a> <span class="small font-weight-light">(vertical)</span></figcaption>
+      </figure>
+    </div>
+    
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10 col-15 mx-0">
+        <figure class="figure">
+          <img src="/user/uploads/files/graphics/sign_square.jpg" class="figure-img img-fluid" alt="">
+          <figcaption class="text-center text-white"><a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/graphics/sign_square.png" download="Filmmakers4Future_Sign_Square">png</a> <span class="small font-weight-light">(square)</span> · <a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/graphics/sign_vertical.png" download="Filmmakers4Future_Sign_Vertical">png</a> <span class="small font-weight-light">(vertical)</span></figcaption>
+        </figure>
+      </div>
+    
+  <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 col-15 mx-0">
     <figure class="figure">
-      <img src="/user/uploads/files/logos/logo_circle.svg" width="500px" class="figure-img img-fluid" alt="">
-      <figcaption class="text-center text-white"><a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/sticker/Filmmakers4Future_Sticker_60mm_3mm_Bleed.pdf" download="Filmmakers4Future_Sticker_60mm_3mm_Bleed_ISO_Coated_v2_300%">pdf</a> <span class="small font-weight-light">(60mm - 3mm bleed)</span> · <a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/sticker/Filmmakers4Future_Sticker_95mm_3mm_Bleed.pdf" download="Filmmakers4Future_Sticker_95mm_3mm_Bleed_ISO_Coated_v2_300%">pdf</a> <span class="small font-weight-light">(95mm - 3mm bleed)</span></figcaption>
+      <img src="/user/uploads/img/header_wide.jpg" class="figure-img img-fluid" alt="">
+      <figcaption class="text-center text-white"><a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/header/header.jpg" download="Filmmakers4Future_Header">jpg</a> <span class="small font-weight-light">(2400x1260)</span> · <a target="_blank" rel="noopener noreferrer" href="/user/uploads/files/header/header_wide.jpg" download="Filmmakers4Future_Header_Wide">jpg</a> <span class="small font-weight-light">(3312x1260)</span></figcaption>
     </figure>
   </div>
+  
 </div>
