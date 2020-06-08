@@ -7,6 +7,7 @@ NoMarkdown: false
 Section: true
 SectionAlignment: center
 SectionBackground: dark
+SectionId: believes
 
 ## Our core believes
 <hr class="divider light my-4">
