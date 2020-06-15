@@ -2,7 +2,7 @@ Pagename: Things productions can easily do
 Pageinfo: Often even saving some money on the way
 Date: 20.04.2020
 Description: Tips on producing green movies and links to further resources.
-PageImage: https://filmmakersforfuture.org/user/uploads/img/preview.jpg
+PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/getting_started.jpg
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true

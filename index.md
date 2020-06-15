@@ -1,6 +1,6 @@
 Date: none
 Description: Our goal is to minimize the environmental impact of the global film industry. We focus on raising awareness and encouraging the exchange of knowledge.
-PageImage: https://filmmakersforfuture.org/user/uploads/img/preview.jpg
+PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/default.jpg
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true

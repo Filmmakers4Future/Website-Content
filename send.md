@@ -2,7 +2,7 @@ Pagename: Send Newsletter
 Pageinfo: Use this page to send a newsletter to the newsletter subscribers.
 Date: none
 Description: Send newsletter to subscribers.
-PageImage: https://filmmakersforfuture.org/user/uploads/img/preview.jpg
+PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/default.jpg
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
