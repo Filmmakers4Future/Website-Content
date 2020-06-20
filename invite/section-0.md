@@ -59,10 +59,10 @@ Fiction and visual storytelling in general have the ability to construct realiti
 --------- Continue reading and sign here: https://filmmakersforfuture.org
 
 ---- The main goals of Filmmakers for Future can easily be summarized ----
-1. Minimizing the environmental impact of our industry
+1. Minimizing the environmental impact of the global film industry
 2. Sustainable storytelling, i.e. what ideals do we convey and what stories do we tell
 3. Raising awareness of the crew and the public
-4. Socially responsible working conditions and a diverse industry.
+4. Socially responsible working conditions and a diverse industry
 ---------
 
 You can also join their working groups to discuss department-specific topics and participate in making the industry fit for the future. Help is very much welcome! Visit https://filmmakersforfuture.org/participate/ for more information.
