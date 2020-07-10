@@ -22,13 +22,23 @@ SectionId: map
 			xhr.onload = function() {
 				if (xhr.status === 200) {
 					var response = JSON.parse(xhr.responseText)
-					var zoomLevel = getZoomLevel(response[0]["boundingbox"]);
-					mapControl(null, [response[0]["lat"], response[0]["lon"]], zoomLevel, null)
-					search.value = '';
+					if (Array.isArray(response) && response.length) {
+						var zoomLevel = getZoomLevel(response[0]["boundingbox"]);
+						mapControl(null, [response[0]["lat"], response[0]["lon"]], zoomLevel, null)
+						search.value = '';
+					} else {
+						alert('Location could not be found.');
+						search.classList.add('input-error');
+						setTimeout(function(){ search.classList.remove('input-error'); }, 1000);
+						search.value = '';
+					}
 				}
 				else {
-					alert('Search failed.  Returned status of ' + xhr.status);
+					alert('Search failed. Please try again.');
 				}
+			};
+			xhr.onerror = function(){
+				alert('Search failed. Please try again.');
 			};
 			xhr.send(); 
 		}
