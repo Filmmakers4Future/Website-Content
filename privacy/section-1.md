@@ -41,6 +41,7 @@ Additionally the following data is collected:
 
 * A website link you provide (optional)
 * The country you are located in
+* Information to help us verify your signature
 * Are you an individual or a company?
   * Individual:
     * Your full name
