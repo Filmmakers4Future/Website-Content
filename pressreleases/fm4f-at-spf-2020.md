@@ -1,0 +1,52 @@
+Title: Fm4F at the Sustainable Production Forum 2020
+Description: Filmmakers for Future will join the SPF this year!
+Category: Pressreleases Panels
+Date: 18.10.2020 13:30
+SectionBackground: alternate
+PageImage: https://filmmakersforfuture.org/user/uploads/img/pressreleases/spf_2020/banner.png
+
+<div class="row justify-content-center text-center">
+	<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 mx-5 mb-3">
+		<figure class="figure">
+			<a target="_blank" rel="noopener noreferrer" href="/user/uploads/img/pressreleases/spf_2020/banner.png"><img src="/user/uploads/img/pressreleases/spf_2020/invite.png" width="100%" class="figure-img img-fluid mb-3" alt="Green Shooting Card Logo"></a>
+			<figcaption class="text-center text-white">
+				<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.youtube.com/watch?v=SHdfLZtdV-o&feature=youtu.be">Watch: SPF 2019 Full Summary (YouTube)</a>
+			</figcaption>
+		</figure>
+	</div>
+</div>
+
+The **Sustainable Production Forum (SPF)** will take place virtually this year due to covid-19.  
+Although this is a bit of a loss, it does have one major advantage: People from all over the world will be able to participate much easier!
+Since Filmmakers for Future will also be joining a panel this year, we would like to invite you to this event.
+
+#### About the event
+The **Sustainable Production Forum (SPF)** focuses on the pressing issue of sustainability within the motion picture and entertainment industry. Evidence has shown that this industry is a contributor to our global environmental footprint and that motion picture and entertainment must shift to continue business as usual. The SPF was imagined as a pathway to discuss and highlight the challenges and create open dialogue to define solutions which work towards a vision for sustainable film-making. 
+
+SPF is an annual event that takes place over two days. It is a one of a kind event that brings together members from across the motion picture industry as well as sustainability experts and enthusiasts alike. 
+
+<div class="row justify-content-center text-center">
+	<div class="col-xl-9 col-lg-7 col-md-10 col-sm-10 col-10 mx-5 mb-3">
+		<figure class="figure">
+			<a target="_blank" rel="noopener noreferrer" href="/user/uploads/img/pressreleases/spf_2020/banner.png"><img src="/user/uploads/img/pressreleases/spf_2020/sustainable_production_worldwide.jpg" width="100%" class="figure-img img-fluid mb-3" alt="Green Shooting Card Logo"></a>
+			<figcaption class="text-center text-white">
+				<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.sustainableproductionforum.com/spf-2020-virtual#worldwide-2020">Register for the free Panel</a>
+			</figcaption>
+		</figure>
+	</div>
+</div>
+
+	
+#### About our panelists
+
+<div class="row justify-content-left text-left">
+	<div class="col-xl-3 col-lg-4 col-md-10 col-sm-10 col-10 mb-3">
+		<figure class="figure">
+			<a target="_blank" rel="noopener noreferrer" href="/user/uploads/img/pressreleases/spf_2020/Veronika.jpg"><img src="/user/uploads/img/pressreleases/spf_2020/Veronika.jpg" width="100%" class="figure-img img-fluid mb-3" alt="Green Shooting Card Logo"></a>
+		</figure>
+	</div>
+	<div class="col-xl col-lg mb-3 text-white">
+			<b>Veronika Große</b> is a Berlin based <b>Production Designer</b>.<br>  
+			She joined Filmmakers for Future at the start of 2020. Filmmakers for Future is a grass root organisation of Filmmakers who unite behind their statement to minimize the environmental impact of the global film industry. They focus primarily on raising awareness and encouraging the exchange of knowledge and experience. Veronika is a mentor of the internal Production Design working group and has focused lately on outreach to the next generation of young filmmakers.
+		</div>
+</div>
