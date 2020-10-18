@@ -1,4 +1,4 @@
-Title: Fm4F at the Sustainable Production Forum 2020
+Title: Fm4F joins the Sustainable Production Forum 2020
 Description: Filmmakers for Future will join the SPF this year!
 Category: Pressreleases Panels
 Date: 18.10.2020 13:30
