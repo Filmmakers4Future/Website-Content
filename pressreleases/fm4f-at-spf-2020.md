@@ -8,7 +8,7 @@ PageImage: https://filmmakersforfuture.org/user/uploads/img/pressreleases/spf_20
 <div class="row justify-content-center text-center">
 	<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 mx-5 mb-3">
 		<figure class="figure">
-			<a target="_blank" rel="noopener noreferrer" href="/user/uploads/img/pressreleases/spf_2020/banner.png"><img src="/user/uploads/img/pressreleases/spf_2020/invite.png" width="100%" class="figure-img img-fluid mb-3" alt="Green Shooting Card Logo"></a>
+			<a target="_blank" rel="noopener noreferrer" href="https://www.sustainableproductionforum.com"><img src="/user/uploads/img/pressreleases/spf_2020/invite.png" width="100%" class="figure-img img-fluid mb-3" alt="Green Shooting Card Logo"></a>
 			<figcaption class="text-center text-white">
 				<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.youtube.com/watch?v=SHdfLZtdV-o&feature=youtu.be">Watch: SPF 2019 Full Summary (YouTube)</a>
 			</figcaption>
@@ -28,7 +28,7 @@ SPF is an annual event that takes place over two days. It is a one of a kind eve
 <div class="row justify-content-center text-center">
 	<div class="col-xl-9 col-lg-7 col-md-10 col-sm-10 col-10 mx-5 mb-3">
 		<figure class="figure">
-			<a target="_blank" rel="noopener noreferrer" href="/user/uploads/img/pressreleases/spf_2020/banner.png"><img src="/user/uploads/img/pressreleases/spf_2020/sustainable_production_worldwide.jpg" width="100%" class="figure-img img-fluid mb-3" alt="Green Shooting Card Logo"></a>
+			<img src="/user/uploads/img/pressreleases/spf_2020/sustainable_production_worldwide.jpg" width="100%" class="figure-img img-fluid mb-3" alt="Sustainable Production Worldwide Panel Banner">
 			<figcaption class="text-center text-white">
 				<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.sustainableproductionforum.com/spf-2020-virtual#worldwide-2020">Register for the free Panel</a>
 			</figcaption>
@@ -42,7 +42,7 @@ SPF is an annual event that takes place over two days. It is a one of a kind eve
 <div class="row justify-content-left text-left">
 	<div class="col-xl-3 col-lg-4 col-md-10 col-sm-10 col-10 mb-3">
 		<figure class="figure">
-			<a target="_blank" rel="noopener noreferrer" href="/user/uploads/img/pressreleases/spf_2020/Veronika.jpg"><img src="/user/uploads/img/pressreleases/spf_2020/Veronika.jpg" width="100%" class="figure-img img-fluid mb-3" alt="Green Shooting Card Logo"></a>
+			<img src="/user/uploads/img/pressreleases/spf_2020/Veronika.jpg" width="100%" class="figure-img img-fluid mb-3" alt="Green Shooting Card Logo">
 		</figure>
 	</div>
 	<div class="col-xl col-lg mb-3 text-white">
