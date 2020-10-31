@@ -222,6 +222,7 @@ SectionId: map
 						Select Region
 					</button>
 					<div class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="regionDropdownButton">
+						<a class="dropdown-item" href="#" onclick="mapControl(this, [3.162,15.996], 3.00, null);">Africa</a>
 						<a class="dropdown-item" href="#" onclick="mapControl(this, [46.195,7.031], 5.00, null);">Europe</a>
 						<a class="dropdown-item" href="#" onclick="mapControl(this, [43.069,-96.328], 4.00, null);">North America</a>
 					</div>
