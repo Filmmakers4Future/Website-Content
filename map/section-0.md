@@ -8,12 +8,18 @@ SectionId: map
 
 <script type="text/javascript">
 	// Default map location and configuration
-	const showSearchBar = false;
+	var showSearchBar = true;
 	var mapBaseURL = "https://kartevonmorgen.org/";
 	const fixedTag = ["#greenfilm"];
     var currentTag = [];
     var currentLocation = [37.788,-30.938];
 	var currentZoomLevel = 3.00;
+	
+	// Allow setting searchbar via URL param
+	urlParam = new URLSearchParams(window.location.search).get('showSearchBar')
+	if (urlParam) {
+		var showSearchBar = (new URLSearchParams(window.location.search).get('showSearchBar') === "true")
+	}
 	
 	// Search for a location using the nominatim openstreetmap api
 	function searchLocation(search) {
