@@ -167,8 +167,8 @@ SectionId: map
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">Accomodation</h6>
 					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, null, ['#accommodation']);">All Entries</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#accomodation', '#apartment']);">Apartments</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#accomodation', '#hotel']);">Hotels</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#accommodation', '#apartment']);">Apartments</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#accommodation', '#hotel']);">Hotels</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">Departments</h6>
 					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#camera']);">Camera</a>
