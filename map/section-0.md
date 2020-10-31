@@ -8,9 +8,10 @@ SectionId: map
 
 <script type="text/javascript">
 	// Default map location and configuration
-	var mapBaseURL = "https://kartevonmorgen.org/"
-	var fixedTag = ["#greenfilm"]
-    var currentTag = []
+	const showSearchBar = false;
+	var mapBaseURL = "https://kartevonmorgen.org/";
+	const fixedTag = ["#greenfilm"];
+    var currentTag = [];
     var currentLocation = [37.788,-30.938];
 	var currentZoomLevel = 3.00;
 	
@@ -25,7 +26,7 @@ SectionId: map
 					var response = JSON.parse(xhr.responseText)
 					if (Array.isArray(response) && response.length) {
 						var zoomLevel = getZoomLevel(response[0]["boundingbox"]);
-						mapControl(null, [response[0]["lat"], response[0]["lon"]], zoomLevel, null)
+						mapControl(null, null, [response[0]["lat"], response[0]["lon"]], zoomLevel, null)
 						search.value = '';
 					} else {
 						alert('Location could not be found.');
@@ -60,8 +61,9 @@ SectionId: map
 			return 3.00
 		}
 	}
+
 	// Function to control the iframe content
-	function mapControl(element, loc, zoom, tag) {
+	function mapControl(element, add, loc, zoom, tag) {
 		// If opened by onclick disable default (adding # to the url)
 		if (event && element) {
 			event.preventDefault();
@@ -77,17 +79,32 @@ SectionId: map
 		currentLocation = Object.is(loc, null) ? currentLocation : loc;
 		currentZoomLevel = Object.is(zoom, null) ? currentZoomLevel : zoom;
 		currentTag = Object.is(tag, null) ? currentTag : tag;
+		// Add fixed tags to search as fixedtags are not suppport when search is hidden
+		if (showSearchBar == false) {
+			// Only add once
+			fixedTag.forEach(function(value){
+				if (currentTag.indexOf(value)==-1) currentTag.push(value);
+			});
+		}
 		if (tag) {
 			// Only change the search so a changed position by the user is not overwritten
-			var url = `${mapBaseURL}#/?search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}`;
+			var url = `${mapBaseURL}#/?search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=show&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}`;
+		} else if (add) {
+			var url = `${mapBaseURL}#/?center=${currentLocation.join(',')}&zoom=${currentZoomLevel}&search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=show&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}&addentry=${add}`;
 		} else {
-			var url = `${mapBaseURL}#/?center=${currentLocation.join(',')}&zoom=${currentZoomLevel}&search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}`;
+			var url = `${mapBaseURL}#/?center=${currentLocation.join(',')}&zoom=${currentZoomLevel}&search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=hide&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}`;
 		}
 		// Change iframe URL
 		document.getElementById('greenProductionMap').src = url;
 	}
 	// Load the map via cookie or button click
 	function loadMap(runtype) {
+		if (showSearchBar == false) {
+				mapBaseURL += "mapAndEntryList.html"
+				currentTag.push.apply(currentTag, fixedTag)
+				document.getElementById("addEntry").style.display = "";
+		}
+			
 		if (runtype == "button") {
 			cookieChoice = document.getElementById('saveSetting').checked
 			if (cookieChoice) {
@@ -97,7 +114,7 @@ SectionId: map
 		document.getElementById('map').style.background = 'none';
 		document.getElementById('mapContainer').style["display"] = "";
 		document.getElementById('privacyWarning').style["display"] = "none";
-		mapControl(null, null, null, null);
+		mapControl(null, null, null, null, null);
 	}
 	// Cookie helpers
 	function createCookie(cookieName,value,daysToExpire){
@@ -127,54 +144,59 @@ SectionId: map
 <div id ="mapContainer" style="display:none">
 	<div markdown="1">#### Shortcuts</div>
 	<div class="row justify-content-center text-white">
+		<div class="col pt-2" style="display: none;" id="addEntry">
+			<button class="btn btn-secondary" type="button" onclick="mapControl(null, 'company', null, null, null)">
+				Add Entry
+			</button>
+		</div>
 		<div class="col pt-2">
 			<div class="dropdown" id="region">
 				<button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Select Category
 				</button>
 				<ul class="dropdown-menu scrollable-menu" id="categoryDropdown" role="menu" aria-labelledby="categoryDropdownButton">
-					<a class="dropdown-item font-weight-bold active" id="defaultActive" href="#" onclick="mapControl(this, null, null, []);">All Entries</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#filmmakers4future']);">Our Supporters</a>
+					<a class="dropdown-item font-weight-bold active" id="defaultActive" href="#" onclick="mapControl(this, null, null, null, []);">All Entries</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#filmmakers4future']);">Our Supporters</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">Accomodation</h6>
-					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, ['#accommodation']);">All Entries</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#accomodation', '#apartment']);">Apartments</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#accomodation', '#hotel']);">Hotels</a>
+					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, null, ['#accommodation']);">All Entries</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#accomodation', '#apartment']);">Apartments</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#accomodation', '#hotel']);">Hotels</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">Departments</h6>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#camera']);">Camera</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#catering']);">Catering</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#costume']);">Costume</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#electricians']);">Electricians</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#grip']);">Grip</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#hairandmakeup']);">Hair & Makeup</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#location']);">Location</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#postproduction']);">Post-Production</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#production']);">Production</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#props']);">Props</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#setdesign']);">Set-Design</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#sfx']);">SFX</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#sound']);">Sound</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#transportation']);">Transportation</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#vfx']);">VFX</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#camera']);">Camera</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#catering']);">Catering</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#costume']);">Costume</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#electricians']);">Electricians</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#grip']);">Grip</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#hairandmakeup']);">Hair & Makeup</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#location']);">Location</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#postproduction']);">Post-Production</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#production']);">Production</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#props']);">Props</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#setdesign']);">Set-Design</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#sfx']);">SFX</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#sound']);">Sound</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#transportation']);">Transportation</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#vfx']);">VFX</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">Rentals</h6>
-					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, ['#rental']);">All Entries</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#rental', '#camera']);">Camera</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#rental', '#grip']);">Grip</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#rental', '#light']);">Light</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#rental', '#vehicles']);">Vehicles</a>
+					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, null, ['#rental']);">All Entries</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#rental', '#camera']);">Camera</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#rental', '#grip']);">Grip</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#rental', '#light']);">Light</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#rental', '#vehicles']);">Vehicles</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">Sharing</h6>
-					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, ['#sharing']);">All Entries</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#sharing', '#carsharing']);">Car Sharing</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#sharing', '#bikesharing']);">Bike Sharing</a>
+					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, null, ['#sharing']);">All Entries</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#sharing', '#carsharing']);">Car Sharing</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#sharing', '#bikesharing']);">Bike Sharing</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">Other</h6>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#greenconsulting']);">Green Consulting</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#shootinglocation']);">Shooting Locations</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#filmcommission']);">Film Commissions</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, ['#filmfestival']);">Film Festival</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#greenconsulting']);">Green Consulting</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#shootinglocation']);">Shooting Locations</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#filmcommission']);">Film Commissions</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#filmfestival']);">Film Festival</a>
 				</ul>
 			</div>
 		</div>
@@ -185,34 +207,34 @@ SectionId: map
 				</button>
 				<ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="cityDropdownButton">
 					<h6 class="dropdown-header">Canada</h6>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [45.493,-73.692], 10.00, null);">Montréal</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [46.803,-71.293], 10.00, null);">Québec</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [43.680,-79.443], 10.00, null);">Toronto</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [49.253,-123.139], 10.00, null);">Vancouver</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [45.493,-73.692], 10.00, null);">Montréal</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [46.803,-71.293], 10.00, null);">Québec</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [43.680,-79.443], 10.00, null);">Toronto</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [49.253,-123.139], 10.00, null);">Vancouver</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">Germany</h6>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [52.503,13.293], 11.00, null);">Berlin</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [50.975,11.014], 11.00, null);">Erfurt</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [53.548,9.957], 11.00, null);">Hamburg</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [50.939,6.944], 11.00, null);">Köln</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [51.340,12.335], 11.00, null);">Leipzig</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [48.134,11.544], 11.00, null);">München</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [52.399,13.011], 11.00, null);">Potsdam</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [52.503,13.293], 11.00, null);">Berlin</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [50.975,11.014], 11.00, null);">Erfurt</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [53.548,9.957], 11.00, null);">Hamburg</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [50.939,6.944], 11.00, null);">Köln</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [51.340,12.335], 11.00, null);">Leipzig</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [48.134,11.544], 11.00, null);">München</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [52.399,13.011], 11.00, null);">Potsdam</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">UK</h6>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [51.452,-2.606], 10.00, null);">Bristol</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [51.480,-3.190], 10.00, null);">Cardiff</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [51.500,-0.196], 10.00, null);">London</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [51.452,-2.606], 10.00, null);">Bristol</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [51.480,-3.190], 10.00, null);">Cardiff</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [51.500,-0.196], 10.00, null);">London</a>
 					<div class="dropdown-divider"></div>
 					<h6 class="dropdown-header">USA</h6>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [33.747,-84.398], 10.00, null);">Atlanta</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [41.877,-87.670], 10.00, null);">Chicago</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [34.026,-118.264], 10.00, null);">Los Angeles</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [25.778,-80.211], 10.00, null);">Miami</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [44.958,-93.309], 10.00, null);">Minneapolis</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [29.931,-90.102], 10.00, null);">New Orleans</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [40.679,-73.996], 10.00, null);">New Yorck</a>
-					<a class="dropdown-item" href="#" onclick="mapControl(this, [47.591,-122.324], 10.00, null);">Seattle</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [33.747,-84.398], 10.00, null);">Atlanta</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [41.877,-87.670], 10.00, null);">Chicago</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [34.026,-118.264], 10.00, null);">Los Angeles</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [25.778,-80.211], 10.00, null);">Miami</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [44.958,-93.309], 10.00, null);">Minneapolis</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [29.931,-90.102], 10.00, null);">New Orleans</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [40.679,-73.996], 10.00, null);">New Yorck</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [47.591,-122.324], 10.00, null);">Seattle</a>
 				</ul>
 			</div>
 		</div>
@@ -222,9 +244,9 @@ SectionId: map
 						Select Region
 					</button>
 					<div class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="regionDropdownButton">
-						<a class="dropdown-item" href="#" onclick="mapControl(this, [3.162,15.996], 3.00, null);">Africa</a>
-						<a class="dropdown-item" href="#" onclick="mapControl(this, [46.195,7.031], 5.00, null);">Europe</a>
-						<a class="dropdown-item" href="#" onclick="mapControl(this, [43.069,-96.328], 4.00, null);">North America</a>
+						<a class="dropdown-item" href="#" onclick="mapControl(this, null, [3.162,15.996], 3.00, null);">Africa</a>
+						<a class="dropdown-item" href="#" onclick="mapControl(this, null, [46.195,7.031], 5.00, null);">Europe</a>
+						<a class="dropdown-item" href="#" onclick="mapControl(this, null, [43.069,-96.328], 4.00, null);">North America</a>
 					</div>
 				</div>
 		</div>
