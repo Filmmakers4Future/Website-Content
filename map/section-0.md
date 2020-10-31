@@ -97,7 +97,7 @@ SectionId: map
 			// Only change the search so a changed position by the user is not overwritten
 			var url = `${mapBaseURL}#/?search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=show&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}`;
 		} else if (add) {
-			var url = `${mapBaseURL}#/?center=${currentLocation.join(',')}&zoom=${currentZoomLevel}&search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=show&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}&addentry=${add}`;
+			var url = `${mapBaseURL}#/?search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=show&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}&addentry=${add}`;
 		} else {
 			var url = `${mapBaseURL}#/?center=${currentLocation.join(',')}&zoom=${currentZoomLevel}&search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=hide&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}`;
 		}
