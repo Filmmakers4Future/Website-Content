@@ -72,6 +72,7 @@ SectionId: map
 				activeElement.classList.remove("active");
 				element.classList.add("active");
 				activeElement = element;
+				element.parentElement.parentElement.getElementsByTagName("button")[0].textContent = element.textContent;
 			}
 			};
 		// Checks if a new location, tag or zoom level is passed to the function
