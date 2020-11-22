@@ -127,7 +127,7 @@ SectionId: map
 	function createCookie(cookieName,value,daysToExpire){
 		var date = new Date();
 		date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
-		document.cookie = cookieName + "=" + value + "; expires=" + date.toGMTString();
+		document.cookie = cookieName + "=" + value + "; expires=" + date.toGMTString() + ";SameSite=Strict";
 	}
 	function accessCookie(cookieName) {
 		var name = cookieName + "=";
