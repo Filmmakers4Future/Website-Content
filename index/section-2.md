@@ -24,8 +24,8 @@ SectionBackground: primary
   <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7 col-7 mx-5">
     <figure class="figure">
       <img src="/user/uploads/files/logos/sf4_logo.svg" width="500px" class="figure-img img-fluid" alt="Scientists for Future Logo">
-      <a target="_blank" rel="noopener noreferrer" href="https://scientistsforfuture.org"><figcaption class="text-center text-white">Official Statement</figcaption></a>
-      <a target="_blank" rel="noopener noreferrer" href="https://www.scientists4future.org/stellungnahme/facts-2019-03/"><figcaption class="text-center text-white">Climate Change Facts</figcaption></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://scientists4future.org/we-are/initial-statement/"><figcaption class="text-center text-white">Official Statement</figcaption></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://scientists4future.org/we-are/facts/"><figcaption class="text-center text-white">Climate Change Facts</figcaption></a>
     </figure>
   </div>
 </div>
