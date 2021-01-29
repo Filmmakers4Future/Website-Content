@@ -6,8 +6,6 @@ HiddenFromSitemap: true
 Section: true
 SectionId: crewunited
 
-### Filmmakers for Future on Crew United
-
 If you are in a country where [Crew United](https://www.crew-united.com/en) is used as a cv and networking platform, you can add **Filmmakers for Future (Fm4F)** as an association to your profile. This way your colleagues can directly see who they can team up with and companies can easily search for crew members for green productions.
 
 <div class="row justify-content-center pt-4">
