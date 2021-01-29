@@ -6,6 +6,7 @@ HiddenFromSitemap: true
 NoMarkdown: true
 Section: true
 SectionBackground: primary
+SectionId: furtherResources
 
 <div class="row justify-content-center mb-5">
   <div class="col-lg-8 text-center">
