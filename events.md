@@ -1,4 +1,4 @@
-Pagename: Events
+Pagename: Upcoming Events
 Pageinfo: #Filmmakers4Future - Filmmakers for Future
 Date: None
 Description: An overview of upcoming events.
