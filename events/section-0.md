@@ -8,6 +8,5 @@ Section: true
 SectionAlignment: center
 SectionBackground: dark
 SectionId: calendar
-CalendarDates: []
 
 [calendar]
