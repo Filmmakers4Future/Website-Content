@@ -15,3 +15,5 @@ posting via an official social media account, or acting as an appointed
 representative at an online or offline event.
 
 Additional guidelines regarding contributing to our code on GitHub, can be found [here](/coding-guidelines/). Please review them before contributing.
+
+We may in extreme cases also decide to exclude people from the community because of behaviour that occurred outside the community.
