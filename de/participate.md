@@ -1,11 +1,11 @@
-Pagename: Coding Guidelines
+Pagename: Mitmachen
 Pageinfo: #Filmmakers4Future - Filmmakers for Future
-Date: 08.06.2019
-Description: Our guidelines for GitHub projects.
-PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/coding.jpg
+Date: 19.04.2020
+Description: Werdet Teil der Bewegung! Findet heraus, was ihr tun könnt, um die Filmindustrie grüner zu machen.
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
 HiddenFromSearch: true
 NoMarkdownParagraphs: true
+SectionAlignment: alternate
 SectionBackground: alternate
