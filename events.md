@@ -1,6 +1,6 @@
 Pagename: Events
 Pageinfo: #Filmmakers4Future - Filmmakers for Future
-Date: 05.06.2020
+Date: None
 Description: An overview of upcoming events.
 PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/events.jpg
 HiddenFromArchive: true
