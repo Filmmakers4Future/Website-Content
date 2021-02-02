@@ -4,28 +4,300 @@ HiddenFromCategory: true
 HiddenFromSearch: true
 HiddenFromSitemap: true
 Section: true
+SectionId: map
 
-## Wie man die Karte benutzt
-#### Stadt ausfindig machen
-Um Unternehmen, Veranstaltungen und Initiativen zu finden, die im Zusammenhang mit grüner Filmproduktion stehen, suche einfach deine Stadt auf der Karte und beginne mit der Erkundung!  
+<script type="text/javascript">
+	// Default map location and configuration
+	var showSearchBar = true;
+	var mapBaseURL = "https://kartevonmorgen.org/";
+	const fixedTag = ["#greenfilm"];
+    var currentTag = [];
+    var currentLocation = [37.788,-30.938];
+	var currentZoomLevel = 3.00;
+	
+	// Allow setting searchbar via URL param
+	urlParam = new URLSearchParams(window.location.search).get('showSearchBar')
+	if (urlParam) {
+		var showSearchBar = (new URLSearchParams(window.location.search).get('showSearchBar') === "true")
+	}
+	
+	// Search for a location using the nominatim openstreetmap api
+	function searchLocation(search) {
+		event.preventDefault();
+		if(search.value) {
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', `https://nominatim.openstreetmap.org/search?q=${search.value}&format=json&polygon=1&addressdetails=0`);
+			xhr.onload = function() {
+				if (xhr.status === 200) {
+					var response = JSON.parse(xhr.responseText)
+					if (Array.isArray(response) && response.length) {
+						var zoomLevel = getZoomLevel(response[0]["boundingbox"]);
+						mapControl(null, null, [response[0]["lat"], response[0]["lon"]], zoomLevel, null)
+						search.value = '';
+					} else {
+						alert('Der Standort konnte nicht gefunden werden.');
+						search.classList.add('input-error');
+						setTimeout(function(){ search.classList.remove('input-error'); }, 1000);
+						search.value = '';
+					}
+				}
+				else {
+					alert('Suche fehlgeschlagen. Bitte versuchen Sie es erneut.');
+				}
+			};
+			xhr.onerror = function(){
+				alert('Suche fehlgeschlagen. Bitte versuchen Sie es erneut.');
+			};
+			xhr.send(); 
+		}
+	}
+	// Get a suitable zoom level for the size of the searched entity
+	function getZoomLevel(boundingBox) {
+		var size = Math.max(boundingBox[1]-boundingBox[0], boundingBox[3]-boundingBox[2]);
+		// Look up zoom level: TO BE REPLACED BY SOME FANCY FORMULAR!!
+		if (size < 0.05) { return 15} else
+		if (size < 0.1) { return 14} else
+		if (size < 0.3) { return 12} else
+		if (size < 0.5) { return 11} else
+		if (size < 1) { return 10} else
+		if (size < 2) { return 9} else
+		if (size < 4) { return 8} else
+		if (size < 5) { return 6} else
+		if (size < 10) { return 4} else {
+			return 3.00
+		}
+	}
 
-###### Hier sind einige Beispiele, die du ausprobieren kannst:
-* <a href="#map" onclick="document.getElementById('if_kvm').src = 'https://kartevonmorgen.org/#/?center=52.503,13.293&zoom=11.00&search=%23filmmakers4future';">Berlin</a>
-* <a href="#map" onclick="document.getElementById('if_kvm').src = 'https://kartevonmorgen.org/#/?center=51.514,-0.397&zoom=10.00&search=%23filmmakers4future';">London</a>
-* <a href="#map" onclick="document.getElementById('if_kvm').src = 'https://kartevonmorgen.org/#/?center=33.948,-118.393&zoom=10.00&search=%23filmmakers4future';">Los Angeles</a>
+	// Function to control the iframe content
+	function mapControl(element, add, loc, zoom, tag) {
+		// If opened by onclick disable default (adding # to the url)
+		if (event && element) {
+			event.preventDefault();
+			// Change the active element (style)
+			if (element.parentElement.id == "categoryDropdown") {
+				activeElement.classList.remove("active");
+				element.classList.add("active");
+				activeElement = element;
+				element.parentElement.parentElement.getElementsByTagName("button")[0].textContent = element.textContent;
+			}
+			};
+		// Checks if a new location, tag or zoom level is passed to the function
+		// Using the default values if not
+		currentLocation = Object.is(loc, null) ? currentLocation : loc;
+		currentZoomLevel = Object.is(zoom, null) ? currentZoomLevel : zoom;
+		currentTag = Object.is(tag, null) ? currentTag : tag;
+		// Add fixed tags to search as fixedtags are not suppport when search is hidden
+		if (showSearchBar == false) {
+			// Only add once
+			fixedTag.forEach(function(value){
+				if (currentTag.indexOf(value)==-1) currentTag.push(value);
+			});
+		}
+		if (tag) {
+			// Only change the search so a changed position by the user is not overwritten
+			var url = `${mapBaseURL}#/?search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=show&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}`;
+		} else if (add) {
+			var url = `${mapBaseURL}#/?search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=show&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}&addentry=${add}`;
+		} else {
+			var url = `${mapBaseURL}#/?center=${currentLocation.join(',')}&zoom=${currentZoomLevel}&search=${encodeURI(currentTag.join(' ')).replace(/#/g,'%23')}&left=hide&fixedTags=${encodeURI(fixedTag.join(' ')).replace(/#/g,'')}`;
+		}
+		// Change iframe URL
+		document.getElementById('greenProductionMap').src = url;
+	}
+	// Load the map via cookie or button click
+	function loadMap(runtype) {
+		if (showSearchBar == false) {
+				mapBaseURL += "mapAndEntryList.html"
+				currentTag.push.apply(currentTag, fixedTag)
+				document.getElementById("addEntry").style.display = "";
+		}
+			
+		if (runtype == "button") {
+			cookieChoice = document.getElementById('saveSetting').checked
+			if (cookieChoice) {
+				createCookie("map", cookieChoice, 365)
+			}
+		}
+		document.getElementById('map').style.background = 'none';
+		document.getElementById('mapContainer').style["display"] = "";
+		document.getElementById('privacyWarning').style["display"] = "none";
+		mapControl(null, null, null, null, null);
+	}
+	// Cookie helpers
+	function createCookie(cookieName,value,daysToExpire){
+		var date = new Date();
+		date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+		document.cookie = cookieName + "=" + value + "; expires=" + date.toGMTString() + ";SameSite=Strict";
+	}
+	function accessCookie(cookieName) {
+		var name = cookieName + "=";
+		var allCookieArray = document.cookie.split(';');
+		for(var i=0; i<allCookieArray.length; i++) {
+			var temp = allCookieArray[i].trim();
+			if (temp.indexOf(name)==0)
+			return temp.substring(name.length,temp.length);
+ 	  	}
+		return "";
+	}
+	// Checks if a cookie exist and shows the map in case
+	function cookieCheck() {
+		var mapCookie = accessCookie("map");
+		if (mapCookie === String(true)) {
+			loadMap("cookie");
+		}
+	}
+</script>
 
-#### Verwendung von Tags
-Produktionsbezogene Suchen sollten immer mit dem Tag ***#filmmakers4future*** beginnen.  
-Um deine Suche einzugrenzen, kannst du hintendran zusätzliche Tags anhängen, zum Beispiel ***<a href="#map" onclick="document.getElementById('if_kvm').src = 'https://kartevonmorgen.org/#/?search=%23filmmakers4future%20%23verleih';">#verleih</a>*** (click on the tag to try).  
-Um deine Suche noch spezifischer zu machen, füge einfach weitere Tags hinzu, wie ***<a href="#map" onclick="document.getElementById('if_kvm').src = 'https://kartevonmorgen.org/#/?search=%23filmmakers4future%20%23rental%20%23licht';">#licht</a>***.
+<div id ="mapContainer" style="display:none">
+	<div markdown="1">#### Shortcuts</div>
+	<div class="row justify-content-center text-white">
+		<div class="col pt-2" style="display: none;" id="addEntry">
+			<button class="btn btn-secondary" type="button" onclick="mapControl(null, 'company', null, null, null)">
+				Eintrag hinzufügen
+			</button>
+		</div>
+		<div class="col pt-2">
+			<div class="dropdown" id="region">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Kategorie auswählen
+				</button>
+				<ul class="dropdown-menu scrollable-menu" id="categoryDropdown" role="menu" aria-labelledby="categoryDropdownButton">
+					<a class="dropdown-item font-weight-bold active" id="defaultActive" href="#" onclick="mapControl(this, null, null, null, []);">Alle Einträge</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#filmmakers4future']);">Unsere Unterstützer</a>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">Accomodation</h6>
+					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, null, ['#accommodation']);">Alle Einträge</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#accommodation', '#apartment']);">Wohnungen</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#accommodation', '#hotel']);">Hotels</a>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">Departments</h6>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#camera']);">Kamera</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#catering']);">Catering</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#costume']);">Kostüm</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#electricians']);">Licht</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#grip']);">Grip</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#hairandmakeup']);">Haare & Make-up</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#location']);">Location</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#postproduction']);">Postproduktion</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#production']);">Produktion</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#props']);">Requisiten</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#setdesign']);">Set-Design</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#sfx']);">SFX</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#sound']);">Ton</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#transportation']);">Transport</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#vfx']);">VFX</a>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">Vermietungen</h6>
+					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, null, ['#rental']);">Alle Einträge</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#rental', '#camera']);">Kamera</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#rental', '#grip']);">Grip</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#rental', '#light']);">Licht</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#rental', '#vehicles']);">Fahrzeuge</a>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">Gemeinsame Nutzung</h6>
+					<a class="dropdown-item font-weight-bold" href="#" onclick="mapControl(this, null, null, null, ['#sharing']);">Alle Einträge</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#sharing', '#carsharing']);">Car Sharing</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#sharing', '#bikesharing']);">Fahrrad-Sharing</a>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">Andere</h6>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#greenconsulting']);">Green Consulting</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#shootinglocation']);">Drehorte</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#filmcommission']);">Film-Kommissionen</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, null, null, ['#filmfestival']);">Filmfestspiele</a>
+				</ul>
+			</div>
+		</div>
+		<div class="col pt-2">
+			<div class="dropdown" id="cities">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="cityDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Stadt auswählen
+				</button>
+				<ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="cityDropdownButton">
+					<h6 class="dropdown-header">Canada</h6>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [45.493,-73.692], 10.00, null);">Montréal</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [46.803,-71.293], 10.00, null);">Québec</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [43.680,-79.443], 10.00, null);">Toronto</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [49.253,-123.139], 10.00, null);">Vancouver</a>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">Germany</h6>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [52.503,13.293], 11.00, null);">Berlin</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [50.975,11.014], 11.00, null);">Erfurt</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [53.548,9.957], 11.00, null);">Hamburg</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [50.939,6.944], 11.00, null);">Köln</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [51.340,12.335], 11.00, null);">Leipzig</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [48.134,11.544], 11.00, null);">München</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [52.399,13.011], 11.00, null);">Potsdam</a>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">UK</h6>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [51.452,-2.606], 10.00, null);">Bristol</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [51.480,-3.190], 10.00, null);">Cardiff</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [51.500,-0.196], 10.00, null);">London</a>
+					<div class="dropdown-divider"></div>
+					<h6 class="dropdown-header">USA</h6>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [33.747,-84.398], 10.00, null);">Atlanta</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [41.877,-87.670], 10.00, null);">Chicago</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [34.026,-118.264], 10.00, null);">Los Angeles</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [25.778,-80.211], 10.00, null);">Miami</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [44.958,-93.309], 10.00, null);">Minneapolis</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [29.931,-90.102], 10.00, null);">New Orleans</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [40.679,-73.996], 10.00, null);">New Yorck</a>
+					<a class="dropdown-item" href="#" onclick="mapControl(this, null, [47.591,-122.324], 10.00, null);">Seattle</a>
+				</ul>
+			</div>
+		</div>
+		<div class="col pt-2">
+				<div class="dropdown" id="region">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="regionDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Region auswählen
+					</button>
+					<div class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="regionDropdownButton">
+						<a class="dropdown-item" href="#" onclick="mapControl(this, null, [3.162,15.996], 3.00, null);">Afrika</a>
+						<a class="dropdown-item" href="#" onclick="mapControl(this, null, [46.195,7.031], 5.00, null);">Europa</a>
+						<a class="dropdown-item" href="#" onclick="mapControl(this, null, [43.069,-96.328], 4.00, null);">Nord-Amerika</a>
+					</div>
+				</div>
+		</div>
+		<div class="col-xl-5 col-lg-5 pt-2">
+			<form onsubmit="searchLocation(document.getElementById('locationSearch'))">
+				<div class="input-group">
+					<input type="text" id="locationSearch" class="form-control" placeholder="Search Location">
+					<div class="input-group-append">
+						<button class="btn btn-success" type="submit">Los</button> 
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<iframe class="pt-3" id="greenProductionMap" name="greenProductionMap" style="height:75vh;border: none;" width="100%" height="100%"></iframe>
+	<div markdown="1">**Bitte beachten:** Falls wir eine Kategorie oder eine wichtige Filmstadt in den Shortcuts vergessen haben, kontaktiere [kontaktiere uns](/contact/) bitte.</div>
+</div>
 
-#### Neue Einträge zur Karte hinzufügen
-Wir laden ein und ermutigen dich Unternehmen, Veranstaltungen oder Initiativen hinzuzufügen, die unserer Branche helfen, umweltfreundlich zu produzieren.  
+<div class="text-center text-white pt-5 pb-5" id="privacyWarning" style="display:none;" markdown="1">
+**Hinweis zum Datenschutz**  
+Diese Karte verwendet die externen Dienste [kartevonmorgen.org](https://kartevonmorgen.org) und [openstreetmap.org](https://openstreetmap.org/).  
+Mehr Informationen dazu findest du in unserer [Datenschutzrichtlinie](/privacy#thirdparty).  
+<div class="form-check">
+	<input class="form-check-input" type="checkbox" value="" id="saveSetting">
+	<label title="Cookie name: map - Cookie value: true - Expires in 365 days" class="form-check-label" for="saveSetting">
+		Nicht mehr anzeigen (ein Cookie wird gesetzt).
+	</label>
+</div>
+<button type="button" class="btn btn-info mt-2" onclick="loadMap('button')">Erlauben und Karte laden</button>
+</div>
 
-**Du brauchst kein Konto, um neue Einträge zu erstellen oder zu bearbeiten, wir werden jedoch alle Einreichungen im Auge behalten.**  
+<noscript>
+	<div class="text-center text-white pt-5 pb-5">
+	 <b>Um diese Karte zu verwenden, musst du JavaScript aktivieren.<br>
+	 Folge <a href="https://www.enable-javascript.com/">den Anweisungen</a> um JavaScript in deinem Webbrowser zu aktivieren. </b>
+	</div>
+</noscript>
 
-Wenn möglich, beschreibe bitte kurz, was die von dir hinzugefügte Einrichtung tut und wie sie dazu beitragen kann, dass Produktionen nachhaltiger werden.  
-Füge unbedingt spezifische und allgemeinere Tags hinzu, wie im obigen Beispiel gezeigt, damit andere deinen Eintrag leichter finden können.
-
-#### Über die Karte
-OUnsere Karte ist Teil von [kartevonmorgen.org](https://kartevonmorgen.org). Auf ihrer Website findest du viele interessante grüne Unternehmen & Initiativen, die zwar nichts mit der Filmproduktion zu tun haben, aber trotzdem für dich interessant sein könnten! Wenn du über etwas stolperst, das für unsere Branche relevant ist, aber nicht auf unserer Seite gezeigt wird, füge bitte den Tag ***#filmmakers4future*** hinzu, damit es hier erscheint!
+<!-- Connects to kartevonmorgen.org only if javascript is enabled -->
+<script>
+	// show privacy warning - only shows when javascript is enabled since map cant be used without it anyway
+	document.getElementById('privacyWarning').style["display"] = "";
+	// Set default active element
+	var activeElement = document.getElementById('defaultActive');
+	// Check if cookie is present
+	cookieCheck()
+</script>

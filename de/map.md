@@ -1,7 +1,8 @@
-Pagename: Green Production Map
+Pagename: Ökologische Produktionskarte
 Pageinfo: Eine Karte mit grünen Produktionsunternehmen, Initiativen und Veranstaltungen.
-Date: 22.04.2020
-Description: Karte mit grünen Produktionsunternehmen, Initiativen und Veranstaltungen.
+Description: Eine Karte mit grünen Produktionsunternehmen, Initiativen und Veranstaltungen.
+PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/map.jpg
+Date: none
 HiddenFromArchive: true
 HiddenFromAuthor: true
 HiddenFromCategory: true
