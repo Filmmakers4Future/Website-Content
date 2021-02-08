@@ -71,7 +71,7 @@ We will process the data provided during signing only based on your consent per 
 
 The data collected during signing will be stored for as long as you remain listed on our website. In case you want to have your signature removed, an informal email is sufficient.
 
-#### Contact form
+#### 2.3. Contact form
 
 Our contact form allows you to easily send us an email.
 
