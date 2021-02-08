@@ -20,7 +20,7 @@ A lot of "green" can happen in the art department: Reuse of old film sets (or pa
 
 #### Our Guest
 
-<div class="row justify-content-left text-left align-items-start">
+<div class="row justify-content-left text-left align-items-center">
 	<div class="col-xl-3 col-lg-4 col-md-10 col-sm-10 col-10">
 		<figure class="figure">
 			<img src="/user/uploads/img/posts/events/talks/2021/olivier_meidinger.jpg" class="figure-img img-fluid" alt="Picture of Korina Gutsche">

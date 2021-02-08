@@ -21,7 +21,7 @@ Directing and "green"? How does that come together? Lars tells us how much influ
 
 #### Our Guest
 
-<div class="row justify-content-left text-left align-items-end">
+<div class="row justify-content-left text-left align-items-center">
 	<div class="col-xl-3 col-lg-4 col-md-10 col-sm-10 col-10">
 		<figure class="figure">
 			<img src="/user/uploads/img/posts/events/talks/2021/jessen_lars_c_marion_von_der_mehden.jpg" class="figure-img img-fluid" alt="Picture of Korina Gutsche">

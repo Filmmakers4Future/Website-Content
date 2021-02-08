@@ -20,7 +20,7 @@ PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/hands_on_ta
 
 #### Our Guest
 
-<div class="row justify-content-left text-left align-items-end">
+<div class="row justify-content-left text-left align-items-center">
 	<div class="col-xl-3 col-lg-4 col-md-10 col-sm-10 col-10">
 		<figure class="figure">
 			<img src="/user/uploads/img/posts/events/talks/2021/korina_gutsche.jpg" width="100%" class="figure-img img-fluid" alt="Picture of Korina Gutsche">

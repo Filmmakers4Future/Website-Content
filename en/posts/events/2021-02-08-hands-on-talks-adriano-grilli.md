@@ -20,7 +20,7 @@ When it comes to light, many people first think of LEDs. But is that really the 
 
 #### Our Guest
 
-<div class="row justify-content-left text-left align-items-start">
+<div class="row justify-content-left text-left align-items-center">
 	<div class="col-xl-3 col-lg-4 col-md-10 col-sm-10 col-10">
 		<figure class="figure">
 			<img src="/user/uploads/img/posts/events/talks/2021/adriano_grilli.jpg" class="figure-img img-fluid" alt="Picture of Korina Gutsche">
