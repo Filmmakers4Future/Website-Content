@@ -86,7 +86,7 @@ We will process the data provided through the contact form only based on your co
 
 #### 2.4. Working Groups
 
-We offer working groups to enable people to participate in Filmmakers for Future and to coordinate us. They can be found at [groups.filmmakersforfuture.org](https://groups.filmmakersforfuture.org/). 
+We offer working groups to enable people to participate in Filmmakers for Future and to coordinate us using the open source tool [HumHub](https://www.humhub.com/en). They can be found at [groups.fm4f.org](https://groups.fm4f.org/). 
 
 The following data are mandatory:
 
