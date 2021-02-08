@@ -107,3 +107,17 @@ Optionally you can provide the following data categories:
 Your full name, username and the optional data you provide will be visible to other members. The data will also be used for notification e-mails (e.g. "User X posted a new comment").
 
 We will process the data provided based on your consent per Art. 6 (1)(a) GDPR. You may revoke your consent at any time with future effect by deleting your account.
+
+#### 2.5. Events
+We use the open source tool [Pretix](https://pretix.eu) at [events.fm4f.org](https://events.fm4f.org) to issue tickets for events we host. 
+We use the data you provided to send you your ticket. Furthermore we also use the data to remind you of the event shortly before it takes place and to inform you of any changes. After the event, we may use the data to send you a summary or follow-up information.
+
+The following data are always mandatory:
+
+* Email address
+
+You can optionally provide additional information (e.g. surveys about an event) when asked via a form during ticket booking.
+
+We will process the data provided only based on your consent per Art. 6 (1)(a) GDPR. You may revoke your consent at any time with future effect. An informal email making this request is sufficient.
+
+The data collected during the ticketing process that can be associated with you will be stored for a maximum of 4 weeks after the event. Once this period has expired, all data that we are not legally required to retain (for example, for tax purposes) will be deleted. Data that you have provided in the context of a survey while booking your ticket may be stored indefinitely in an anonymized form that cannot be linked back to you.
