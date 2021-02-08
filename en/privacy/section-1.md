@@ -118,6 +118,6 @@ The following data are always mandatory:
 
 You can optionally provide additional information (e.g. surveys about an event) when asked via a form during ticket booking.
 
-We will process the data provided only based on your consent per Art. 6 (1)(a) GDPR. You may revoke your consent at any time with future effect. An informal email making this request is sufficient.
+We will process the data provided based on Art. 6 (1) (f) GDPR, which allows the processing of data to fulfill a contract or for measures preliminary to a contract and based on your consent per Art. 6 (1)(a) GDPR. You may revoke your consent at any time with future effect. An informal email making this request is sufficient.
 
 The data collected during the ticketing process that can be associated with you will be stored for a maximum of 4 weeks after the event. Once this period has expired, all data that we are not legally required to retain (for example, for tax purposes) will be deleted. Data that you have provided in the context of a survey while booking your ticket may be stored indefinitely in an anonymized form that cannot be linked back to you.
