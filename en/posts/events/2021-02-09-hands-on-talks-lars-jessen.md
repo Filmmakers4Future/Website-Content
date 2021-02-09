@@ -1,7 +1,7 @@
 Title: Lars Jessen - Director
 Description: Directing and "green"? How does that come together?
 Category: Events Talks Online
-Date: 08.02.2021 13:00
+Date: 09.02.2021 13:00
 SectionBackground: alternate
 SectionId: jessen
 PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_field_talks.png

@@ -1,7 +1,7 @@
 Title: Olivier Meidinger, VSK - Set Designer
 Description: A lot of "green" can happen in the art department: Reuse of old film sets, use of new kinds of materials.
 Category: Events Talks Online
-Date: 08.02.2021 12:00
+Date: 09.02.2021 12:00
 SectionBackground: alternate
 SectionId: meidinger
 PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_field_talks.png

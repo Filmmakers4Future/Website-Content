@@ -1,7 +1,7 @@
 Title: Adriano Grilli - Light Design
 Description: When it comes to light, many people first think of LEDs. But is that really the case?
 Category: Events Talks Online
-Date: 08.02.2021 12:30
+Date: 09.02.2021 12:30
 SectionBackground: alternate
 SectionId: grilli
 PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_field_talks.png

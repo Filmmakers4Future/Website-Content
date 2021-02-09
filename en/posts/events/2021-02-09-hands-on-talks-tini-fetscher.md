@@ -1,9 +1,9 @@
-Title: Korina Gutsche - Green Consultant
-Description: Green Consultants ensure that film and media production is as resource-friendly as possible. It's is where all the threads come together.
+Title: Tini Fetscher - Costume Designer
+Description: Many have already heard about the grim environmental impact of the fashion industry. Tini tells us how to significantly improve the footprint in the costume department.
 Category: Events Talks Online
-Date: 08.02.2021 11:30
+Date: 09.02.2021 13:30
 SectionBackground: alternate
-SectionId: gutsche
+SectionId: fetcher
 PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_field_talks.png
 
 <div class="row justify-content-center text-center">
@@ -13,9 +13,9 @@ PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_fiel
 </div>
 
 #### The Talk
-**Green Consultants** ensure that film and media production is as resource-friendly as possible. It's is where all the threads come together. This profession is a vocation! Sustainability plays the main role for Korina.  
+Many have already heard about the grim environmental impact of the fashion industry. Tini tells us how to significantly improve the footprint in the costume department. One thing is for sure: She won't spin a yarn!
 
-**Date:** <span class="text-white date" data-time="2021-02-19T19:00:00+01:00">19th February 2021 19:00 <small>UTC +1</small></span>  
+**Date:** <span class="text-white date" data-time="2021-03-19T19:30:00+01:00">19th March 2021 19:30 <small>UTC +1</small></span>  
 **Price:** Free
 
 #### Our Guest
@@ -23,18 +23,16 @@ PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_fiel
 <div class="row justify-content-left text-left align-items-center">
 	<div class="col-xl-3 col-lg-4 col-md-10 col-sm-10 col-10">
 		<figure class="figure">
-			<img src="/user/uploads/img/posts/events/talks/2021/korina_gutsche.jpg" width="100%" class="figure-img img-fluid" alt="Picture of Korina Gutsche">
+			<img src="/user/uploads/img/posts/events/talks/2021/tini_fetscher.jpg" class="figure-img img-fluid" alt="Picture of Korina Gutsche">
 		</figure>
 	</div>
 	<div class="col-xl col-lg text-white">
-		<b>AND ACTION! THINK GREEN before slating...</b><br>
-		Relevance, status quo and best practice as a Green Consultant.<br><br>
 		<ul>
-			<li>Dipl. Ing. environmental engineering & IHK production manager film & TV.</li>
-			<li>Since 2011 freelance production manager sustainability, lecturer and consultant for environmental sustainability and climate accounting in the media industry.</li>
-			<li>Supported as Green Consultant various film projects of the <b>ARD Sustainability</b> Initiative and <b>100 Green Productions</b>.</li>
+			<li><b>Tini Fetscher</b> was born in 1978 in Freudenstadt.</li>
+			<li><b>2005</b> graduated from the <b>international fashion school ESMOD</b> in Munich</li>
+			<li><b>2007</b> after her first internship in the film industry she fell in love with the profession and had nothing else in mind</li>
+			<li>In <b>2018</b> she then had the desire to apply her sustainable private life to her professional life as well.</li>
 		</ul>
-		<b>More information at: <a href="https://bluechildfilm.com">bluechildfilm.com</a></b><br><br>
 	</div>
 </div>
 
@@ -52,21 +50,20 @@ This first season of talks (including this one) will be held in German. However,
 
 #### PDF Downloads
 * [Series Leaflet](/user/uploads/files/flyers/Fm4F_Praxisgespraeche.pdf) (German)
-* [Talk Leaflet](/user/uploads/files/flyers/Fm4F_Praxisgespraeche_1_Green_Consultant_Korina_Gutsche.pdf) (German)
+* [Talk Leaflet](/user/uploads/files/flyers/Fm4F_Praxisgespraeche_5_Kostuem_Tini_Fetscher.pdf) (German)
 
-
-<link rel="stylesheet" type="text/css" href="https://events.fm4f.org/Fm4F/a8qrh/widget/v1.css">
+<link rel="stylesheet" type="text/css" href="https://events.fm4f.org/Fm4F/em983/widget/v1.css">
 <link rel="stylesheet" type="text/css" href="/user/themes/fm4ftheme/css/pretix.css">
-<style>#gutsche .pretix-widget-availability-available, #gutsche .pretix-widget-item-price-col{display:none}</style>
+<style>#fetcher .pretix-widget-availability-available, #fetcher .pretix-widget-item-price-col{display:none}</style>
 <script type="text/javascript" src="https://events.fm4f.org/widget/v1.de-informal.js" async></script>
 
 <div class="row justify-content-center">
-	<pretix-widget class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-10" event="https://events.fm4f.org/Fm4F/a8qrh/"></pretix-widget>
+	<pretix-widget class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-10" event="https://events.fm4f.org/Fm4F/em983/"></pretix-widget>
 	<noscript>
 		<style> pretix-widget { display: none } </style>
 		<div class="text-center text-white pt-2 pb-2">
 			<b>JavaScript is disabled in your browser.<br>
-				To register for the talk without JavaScript, please <a target="_blank" rel="noopener" href="https://events.fm4f.org/Fm4F/a8qrh/">click here</a>.</b>
+				To register for the talk without JavaScript, please <a target="_blank" rel="noopener" href="https://events.fm4f.org/Fm4F/em983/">click here</a>.</b>
 		</div>
 	</noscript>
 </div>
