@@ -13,7 +13,7 @@ PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_fiel
 </div>
 
 #### The Talk
-**Green Consultants** ensure that film and media production is as resource-friendly as possible. It's is where all the threads come together. This profession is a vocation! Sustainability plays the main role for Korina.  
+**Green Consultants** ensure that film and media production is as resource-friendly as possible. It's where all the threads come together. This profession is a vocation! Sustainability plays the main role for Korina.
 
 **Date:** <span class="text-white date" data-time="2021-02-19T19:00:00+01:00">19th February 2021 19:00 <small>UTC +1</small></span>  
 **Price:** Free

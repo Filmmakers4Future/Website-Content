@@ -14,7 +14,7 @@ PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_fiel
 
 
 #### The Talk
-Directing and "green"? How does that come together? Lars tells us how much influence the director has on the sustainability of the entire production process.  
+Direction and "green"? How does that come together? Lars tells us how much influence the director has on the sustainability of the entire production process.
 
 **Date:** <span class="text-white date" data-time="2021-03-12T19:30:00+01:00">12th March 2021 19:30 <small>UTC +1</small></span>  
 **Price:** Free
