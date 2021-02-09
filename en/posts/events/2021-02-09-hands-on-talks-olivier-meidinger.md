@@ -1,4 +1,4 @@
-Title: Olivier Meidinger, VSK - Set Designer
+Title: Olivier Meidinger, VSK - Production Designer
 Description: A lot of "green" can happen in the art department: Reuse of old film sets, use of new kinds of materials.
 Category: Events Talks Online
 Date: 09.02.2021 12:00
