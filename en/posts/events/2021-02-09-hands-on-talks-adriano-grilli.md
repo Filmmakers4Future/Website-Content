@@ -59,7 +59,7 @@ This first season of talks (including this one) will be held in German. However,
 
 <link rel="stylesheet" type="text/css" href="https://events.fm4f.org/Fm4F/em983/widget/v1.css">
 <link rel="stylesheet" type="text/css" href="/user/themes/fm4ftheme/css/pretix.css">
-<style>#grilli .pretix-widget-availability-available, #grilli .pretix-widget-item-price-col{display:none}</style>
+<style>.pretix-widget-item-count-single-label:after  {content: ' Kostenloses Ticket';color: white;}</style>
 <script type="text/javascript" src="https://events.fm4f.org/widget/v1.de-informal.js" async></script>
 
 <div class="row justify-content-center">
