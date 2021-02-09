@@ -1,10 +1,10 @@
 Title: Korina Gutsche - Green Consultant
 Description: Green Consultants ensure that film and media production is as resource-friendly as possible. It's is where all the threads come together.
 Category: Events Talks Online
-Date: 08.02.2021 13:30
+Date: 08.02.2021 11:30
 SectionBackground: alternate
 SectionId: gutsche
-PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/hands_on_talks.png
+PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_field_talks.png
 
 <div class="row justify-content-center text-center">
 	<div class="col-lg-7 col-md-10 mb-3">
@@ -48,7 +48,11 @@ Green filmmaking is a challenge we all face, but above all it is an opportunity 
 With this series of talks, we want to show you what can be done and encourage you to take your learnings with you into your everyday working life.
 
 #### Language
-This first season of talks (including this one) will be held in German. However, future discussions in English are expected to follow.
+This first season of talks (including this one) will be held in German. However, future ones in English are expected to follow.
+
+#### PDF Downloads
+* [Series Leaflet](/user/uploads/files/flyers/Fm4F_Praxisgespraeche.pdf) (German)
+* [Talk Leaflet](/user/uploads/files/flyers/Fm4F_Praxisgespraeche_1_Green_Consultant_Korina_Gutsche.pdf) (German)
 
 
 <link rel="stylesheet" type="text/css" href="https://events.fm4f.org/Fm4F/a8qrh/widget/v1.css">

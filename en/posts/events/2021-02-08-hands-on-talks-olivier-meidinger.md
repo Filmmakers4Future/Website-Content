@@ -1,10 +1,10 @@
 Title: Olivier Meidinger, VSK - Set Designer
 Description: A lot of "green" can happen in the art department: Reuse of old film sets, use of new kinds of materials.
 Category: Events Talks Online
-Date: 08.02.2021 13:30
+Date: 08.02.2021 12:00
 SectionBackground: alternate
 SectionId: meidinger
-PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/hands_on_talks.png
+PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_field_talks.png
 
 <div class="row justify-content-center text-center">
 	<div class="col-lg-7 col-md-10 mb-3">
@@ -52,8 +52,11 @@ Green filmmaking is a challenge we all face, but above all it is an opportunity 
 With this series of talks, we want to show you what can be done and encourage you to take your learnings with you into your everyday working life.
 
 #### Language
-This first season of talks (including this one) will be held in German. However, future discussions in English are expected to follow.
+This first season of talks (including this one) will be held in German. However, future ones in English are expected to follow.
 
+#### PDF Downloads
+* [Series Leaflet](/user/uploads/files/flyers/Fm4F_Praxisgespraeche.pdf) (German)
+* [Talk Leaflet](/user/uploads/files/flyers/Fm4F_Praxisgespraeche_2_Ausstattung_Olivier_Meidinger_VSK.pdf) (German)
 
 <link rel="stylesheet" type="text/css" href="https://events.fm4f.org/Fm4F/ne3pm/widget/v1.css">
 <link rel="stylesheet" type="text/css" href="/user/themes/fm4ftheme/css/pretix.css">
