@@ -57,18 +57,18 @@ This first season of talks (including this one) will be held in German. However,
 * [Series Leaflet](/user/uploads/files/flyers/Fm4F_Praxisgespraeche.pdf) (German)
 * [Talk Leaflet](/user/uploads/files/flyers/Fm4F_Praxisgespraeche_3_Licht_Adriano_Grilli.pdf) (German)
 
-<link rel="stylesheet" type="text/css" href="https://events.fm4f.org/Fm4F/em983/widget/v1.css">
+<link rel="stylesheet" type="text/css" href="https://events.fm4f.org/Fm4F/rfwdd/widget/v1.css">
 <link rel="stylesheet" type="text/css" href="/user/themes/fm4ftheme/css/pretix.css">
 <style>.pretix-widget-item-count-single-label:after  {content: ' Kostenloses Ticket';color: white;}</style>
 <script type="text/javascript" src="https://events.fm4f.org/widget/v1.de-informal.js" async></script>
 
 <div class="row justify-content-center">
-	<pretix-widget class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-10" event="https://events.fm4f.org/Fm4F/em983/"></pretix-widget>
+	<pretix-widget class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-10" event="https://events.fm4f.org/Fm4F/rfwdd/"></pretix-widget>
 	<noscript>
 		<style> pretix-widget { display: none } </style>
 		<div class="text-center text-white pt-2 pb-2">
 			<b>JavaScript is disabled in your browser.<br>
-				To register for the talk without JavaScript, please <a target="_blank" rel="noopener" href="https://events.fm4f.org/Fm4F/em983/">click here</a>.</b>
+				To register for the talk without JavaScript, please <a target="_blank" rel="noopener" href="https://events.fm4f.org/Fm4F/rfwdd/">click here</a>.</b>
 		</div>
 	</noscript>
 </div>
