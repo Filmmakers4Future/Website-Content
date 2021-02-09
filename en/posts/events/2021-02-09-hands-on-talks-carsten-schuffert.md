@@ -27,7 +27,7 @@ The last step in film production - when the (hopefully sustainably!) shot materi
 		</figure>
 	</div>
 	<div class="col-xl col-lg text-white">
-		<p><b>Carsten Schuffert</b>, born in 1978, has over 30 years experience in film and cinema.</p>
+		<p><b>Carsten Schuffert</b>, born in 1966, has over 30 years experience in film and cinema.</p>
 		<p>As of 2005, his company has developed into a service provider for digital cinema and was instrumental in the creation of digital master and DCP for evaluation in the cinema. In 2009 he planned and built his own <b>post-production building in a resource-saving wooden construction</b>.</p>
 		<p>Carsten Schuffert runs a filmproduction and <b>climate neutral film-posthouse</b>, <a href="https://www.bewegtebilder.de/">BEWEGTE BILDER</a>,  including a Dolby-Atmos mixing stage and a big grading suite. Since 2020 he is also a <b>certified Green Consultant</b> for Film and TV.</p>
 
