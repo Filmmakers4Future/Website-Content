@@ -1,4 +1,4 @@
-Title: Adriano Grilli - Light Design
+Title: Adriano Grilli, BVB - Light Design
 Description: When it comes to light, many people first think of LEDs. But is that really the case?
 Category: Events Talks Online
 Date: 09.02.2021 12:30
