@@ -4,7 +4,7 @@ Category: Strikes
 Date: 12.09.2021 13:30
 SectionBackground: alternate
 SectionId: fetcher
-PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_field_talks.png
+PageImage: https://filmmakersforfuture.org/user/uploads/img/posts/events/strikes/2021/global-climate-strike-september-2021-wide.jpg
 
 
 <div class="row justify-content-center text-center">
