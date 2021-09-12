@@ -7,6 +7,17 @@ SectionId: fetcher
 PageImage: https://filmmakersforfuture.org/user/uploads/img/previews/in_the_field_talks.png
 
 
+<div class="row justify-content-center text-center">
+	<div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 mx-5 mb-3">
+		<figure class="figure">
+			<img src="/user/uploads/img/posts/events/strikes/2021/global-climate-strike-september-2021-wide.jpg" width="100%" class="figure-img img-fluid mb-3" alt="Green Shooting Card Logo">
+			<figcaption class="text-center text-white">
+				<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://map.fridaysforfuture.org/map?c=+All+countries&d=2021-09-24+next+DEEP+GLOBAL&o=all">Find your local strike</a>
+			</figcaption>
+		</figure>
+	</div>
+</div>
+
 The global climate justice movement has announced a global climate strike for the end of September. Filmmakers for Future is calling on every single one, especially from the film industry to join the **STRIKE** on Friday, **24th September 2021** in your city!
 
 -   Find your local strike: [FFF Strike Map](https://map.fridaysforfuture.org/map?c=+All+countries&d=2021-09-24+next+DEEP+GLOBAL&o=all "Fridays for Future strike map")
