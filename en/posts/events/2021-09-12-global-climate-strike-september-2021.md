@@ -1,5 +1,5 @@
 Title: Global Climate Strike
-Description: Many have already heard about the grim environmental impact of the fashion industry. Tini tells us how to significantly improve the footprint in the costume department.
+Description: The global climate justice movement has announced a global climate strike for the end of September.
 Category: Strikes 
 Date: 12.09.2021 13:30
 SectionBackground: alternate
