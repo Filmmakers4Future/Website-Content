@@ -17,11 +17,8 @@ ReplaceHeading: true
   </video>
   <div class="container h-100">
     <div class="h-100 row align-items-center justify-content-center text-center">
-      <!--<div class="align-self-end col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-3 col-6">
+      <div class="align-self-end col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-3 col-6">
         <img class="img-fluid" id="main_logo" src="/user/uploads/files/logos/logo_standalone.svg">
-      </div>-->
-      <div class="align-self-end col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-11 col-6-10">
-         <a alt="Global Climate Strike" href="/en/posts/events/2021-09-12-global-climate-strike-september-2021/"><img class="img-fluid" id="main_logo" src="/user/uploads/img/posts/events/strikes/2021/filmstrike4climate-banner.png"></a>
       </div>
       <div class="col-lg-10">
         <h1 class="text-uppercase text-white font-weight-bold">Filmmakers for Future</h1>
