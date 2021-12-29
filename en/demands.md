@@ -11,4 +11,4 @@ NoMarkdownParagraphs: true
 SectionAlignment: alternate
 SectionBackground: alternate
 
-The demands are work in progress. Want to help finish them? Join our [working groups](/participate).
+The demands are work in progress. Want to help finish them? Join our [working groups](/en/groups/).
