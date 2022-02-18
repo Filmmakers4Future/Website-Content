@@ -29,7 +29,15 @@ The basis for data processing is Art. 6 (1) (f) GDPR, which allows the processin
 
 This data will be stored for fourteen days and not be merged with other data sources.
 
-#### 2.2. Signing the statement
+#### 2.2. Session Cookie
+
+When you visit the main page (containing the signature form) and our contact page, a session cookie is stored on your computer. It is only used to verify the correct captcha answer and is not used to track you.
+
+The basis for data processing is Art. 6 (1) (f) GDPR, which allows the processing of data to fulfill a contract or for measures preliminary to a contract.
+
+A session is valid for 60 minutes at a time.
+
+#### 2.3. Signing the statement
 
 You can sign a statement on our website. The input data will only be used for the purpose of listing you as a supporter and keeping you up to date if you choose to receive newsletters. The mandatory information requested during signing must be provided in full. Otherwise, we will reject your signature.
 
@@ -51,6 +59,8 @@ Additionally the following data is collected:
     * Company name
     * Company field (e.g. "Camera Rental")
     * The cities you are located in
+* Your answer to the math question (to fight spam)
+  * A session id to match the correct answer
 
 The following data will be publicly published on our website alongside your signature:
 
@@ -71,7 +81,7 @@ We will process the data provided during signing only based on your consent per 
 
 The data collected during signing will be stored for as long as you remain listed on our website. In case you want to have your signature removed, an informal email is sufficient.
 
-#### 2.3. Contact form
+#### 2.4. Contact form
 
 Our contact form allows you to easily send us an email.
 
@@ -81,10 +91,12 @@ The following data is collected:
 * Your email address
 * Subject of your message
 * Your message
+* Your answer to the math question (to fight spam)
+  * A session id to match the correct answer
 
 We will process the data provided through the contact form only based on your consent per Art. 6 (1)(a) GDPR. You may revoke your consent at any time with future effect. An informal email making this request is sufficient.
 
-#### 2.4. Working Groups
+#### 2.5. Working Groups
 
 We offer working groups to enable people to participate in Filmmakers for Future and to coordinate us using the open source tool [HumHub](https://www.humhub.com/en). They can be found at [groups.fm4f.org](https://groups.fm4f.org/). 
 
@@ -108,7 +120,7 @@ Your full name, username and the optional data you provide will be visible to ot
 
 We will process the data provided based on your consent per Art. 6 (1)(a) GDPR. You may revoke your consent at any time with future effect by deleting your account.
 
-#### 2.5. Events
+#### 2.6. Events
 We use the open source tool [Pretix](https://pretix.eu) at [events.fm4f.org](https://events.fm4f.org) to issue tickets for events we host. 
 We use the data you provided to send you your ticket. Furthermore we also use the data to remind you of the event shortly before it takes place and to inform you of any changes. After the event, we may use the data to send you a summary or follow-up information.
 
